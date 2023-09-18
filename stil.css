@@ -373,3 +373,103 @@ main .triSlike p {
 
 /*naslov dvg i brojke i redline*/
 
+.naslovDVG {
+
+
+    text-align: center;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+
+}
+
+.naslovDVG .dvg {
+
+    margin-bottom: 13px;
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #303030;
+
+
+}
+
+.naslovDVG .brojke {
+
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #474747;
+    margin-bottom: 20px;
+}
+
+.naslovDVG .redLineBrojke {
+    margin-bottom: 80px;
+}
+
+
+/*statistika*/
+
+.naslovDVG .redLineBackground{
+    width: 100%;
+}
+
+.naslovDVG .statistikaBrojke {
+    /*preko ovog mi ulazi tekst u sliku*/
+    margin-top: -150px;
+    /*align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;*/
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    top: 2767px;
+    left: -1px;
+
+}
+
+.naslovDVG .statistikaBrojke ul {
+    display: flex;
+    list-style-type: none;
+    text-align: justify;
+    white-space: pre-wrap;
+    /*izmedju elementa pravi razmak*/
+    letter-spacing: 8px;
+    
+}
+
+.naslovDVG .statistikaBrojke .broj {
+    margin-top: -100px;
+    font-family: Inter;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color:#fff;
+
+}
+
+.naslovDVG .statistikaBrojke p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+
+}
