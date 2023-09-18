@@ -294,7 +294,7 @@ main .divPosleSlajdova .elementiDole p {
 
 
 main .divPosleSlajdova .elementiDole .btnOnama {
-    
+
     width: 184px;
     height: 48px;
     /*display: inline-block;*/
@@ -320,7 +320,6 @@ main .parapllax .distribucijaSLika {
     padding: 0px, 422px, 0px, 422px;
 
     background: #31384078;
-    
 
 
 }
@@ -334,3 +333,43 @@ main .parapllax .distribucijaSLika {
     position: relative;
 
 }*/
+
+main .triSlike {
+    margin-top: 55px;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 25px;
+    display: flex;
+    /*da prebaci elemente  sl red ako ne staju u red*/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+main .triSlike .slika {
+
+    /*If you want an image to scale down if it has to, 
+    but never scale up to be larger than its original size,*/
+    /*max-width: 100%;*/
+    width: auto;
+    height: auto;
+
+}
+
+
+
+main .triSlike p {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+/*naslov dvg i brojke i redline*/
+
