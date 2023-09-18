@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", sans-serif;
+}
+
+body{
+    max-width: 100%;
+    height: 2000px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*stil za header- jesike, logo i meni*/
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header .div1 {
+    /*boja gde nam se nalazi nas logo*/
+    background-color: #D9D9D9;
+    justify-content: space-between;
+    /*da mi centrira sve element na sredinu headera*/
+    align-items: center;
+    /*da nam rasiri na celu stranicu*/
+    display: flex;
+    height: 75px;
+    /*ako stavim 1440px onda se ekran mora pomerti*/
+    width: 100%;
+    /*da na nam se ne bi lepili uz ivice ekrana*/
+    padding: 0 5%;
+    
+}
+
+.header .logo {
+    height: 44.08px;
+    width: 218.86px;
+    top: 17px;
+    left: 105px;
+}
+
+.header .div1 .jezici ul li {
+    /*da  ne bude jedno ispod drugog vec lepo da bude jedan pored drugog*/
+    display: inline-block; 
+    margin-left: 20px;
+
+}
+
+.header ul {
+    
+}
+
+.header .div1 .jezici ul li a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: #595959;
+}
+
+.header .div1 .jezici ul li .active {
+    text-decoration: none;
+    color: #888787;
+    font-weight: 400;
+    size: 14px;
+    /*vidi jos ima svojih izgleda kao kako treba*/
+}
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- sluzi da se prilagodi uredjaju, sirina pregledaca i initial scale je za zumiranje stranice-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--link da zna odakle da uzima izgled stranice-->
+        <link rel="stylesheet" href="stil.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+
+
+    <body>
+        <header class="header">
+            <div class="div1">
+                <div class="logo">
+                    <!--ovde oznacavamo gde ce da nam nadje sliku iz naseg foldera images pa putanja-->
+                    <!-- alt pomaze nam da ako nece da se ucita sliak da ispise logo-->
+                    <img src="images/logo.png" alt="logo"/>
+                </div>
+                <div class="jezici">
+                    <ul>
+                        <!--# znaci da nece doci do preusmeravanja na link s obzirom da stranica nece biti funk-->
+                        <!--klasa je aktivna tj stavili smo da se trenutno ona prikazuje tj na srp jeziku-->
+                        <li>
+                            <a href="#" class="active">Srpski</a>
+                        </li>
+                        <li>
+                            <a href="#">English</a>
+                        </li>
+                        <li>
+                            <a href="#">Magyar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </body>
+
+</html>
