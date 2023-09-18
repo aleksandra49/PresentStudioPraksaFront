@@ -1,86 +1,163 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <!-- sluzi da se prilagodi uredjaju, sirina pregledaca i initial scale je za zumiranje stranice-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--link da zna odakle da uzima izgled stranice-->
-        <link rel="stylesheet" href="stil.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
-    </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- sluzi da se prilagodi uredjaju, sirina pregledaca i initial scale je za zumiranje stranice-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link da zna odakle da uzima izgled stranice-->
+    <link rel="stylesheet" href="stil.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
 
 
-    <body>
-        <header class="header">
-            <div class="div1">
-                <div class="logo">
-                    <!--ovde oznacavamo gde ce da nam nadje sliku iz naseg foldera images pa putanja-->
-                    <!-- alt pomaze nam da ako nece da se ucita sliak da ispise logo-->
-                    <img src="images/logo.png" alt="logo"/>
-                </div>
-                <div class="jezici">
-                    <ul>
-                        <!--# znaci da nece doci do preusmeravanja na link s obzirom da stranica nece biti funk-->
-                        <!--klasa je aktivna tj stavili smo da se trenutno ona prikazuje tj na srp jeziku-->
-                        <li>
-                            <a href="#" class="active">Srpski</a>
-                        </li>
-                        <li>
-                            <a href="#">English</a>
-                        </li>
-                        <li>
-                            <a href="#">Magyar</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <header class="header">
+        <div class="div1">
+            <div class="logo">
+                <!--ovde oznacavamo gde ce da nam nadje sliku iz naseg foldera images pa putanja-->
+                <!-- alt pomaze nam da ako nece da se ucita sliak da ispise logo-->
+                <img src="images/logo.png" alt="logo" />
+            </div>
+            <div class="jezici">
+                <ul>
+                    <!--# znaci da nece doci do preusmeravanja na link s obzirom da stranica nece biti funk-->
+                    <!--klasa je aktivna tj stavili smo da se trenutno ona prikazuje tj na srp jeziku-->
+                    <li>
+                        <a href="#" class="active">Srpski</a>
+                    </li>
+                    <li>
+                        <a href="#">English</a>
+                    </li>
+                    <li>
+                        <a href="#">Magyar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li class="prviItem">
+                    <h4 class="prvi">O NAMA</h4>
+                    <p>vizija za uspeh</p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li>
+                    <h4>DVG PROIZVODI</h4>
+                    <p>nasi proizvodi</p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li class="brend">
+                    <h4>BRENDOVI</h4>
+                    <p>koje zastupamo</p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li>
+                    <h4>DISTRIBUCIJA </h4>
+                    <p>logistika i operativa </p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li>
+                    <h4>SARADANJA </h4>
+                    <p>prosirenje ponude</p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li>
+                    <h4>NOVOSTI</h4>
+                    <p>aktuelnosti</p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+                <li>
+                    <h4>KONTAKT</h4>
+                    <p>kontaktirajte nas</p>
+                </li>
+                <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
+            </ul>
+        </nav>
+
+        <img class="levoLinija" src="images/linijaIspodMenija.png" alt="linijaIspodMenija">
+    </header>
+    <!-- glavni deo stranice-->
+    <main>
+
+        <div class="slideshow-container">
+            <img class="strelica" src="images/arrow-down-circle.png">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="images/videoSlika1.png" style="width:100%">
+            </div>
+            <!--<div class="mySlides fade">                      
+                      <img src="images/videoSlika2.png" style="width:100%">                     
+                    </div>                 
+                    <div class="mySlides fade">                     
+                      <img src="images/videoSlika3.png" style="width:100%">                      
+                    </div>-->
+
+
+
+            <!-- zakomentarisano za slideshow funkcija -->
+
+            <!-- Next and previous buttons sa w3schol uzela -->
+            <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>-->
+
+            <!-- The dots/circles -->
+            <!--<div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>-->
+
+        </div>
+
+        <div class="divPosleSlajdova">
+            <div class="slikaLevo">
+                <img src="images/Rectangle 124.png" alt="Rectangle 124">
             </div>
 
+            <div class="textDesno">
+                <div class="elementiGore">
+                    <div class="bigText">DVG Company</div>
 
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li class="prviItem">
-                        <h4 class="prvi">O NAMA</h4>
-                        <p>vizija za uspeh</p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li>
-                        <h4>DVG PROIZVODI</h4>
-                        <p>nasi proizvodi</p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li class="brend">
-                        <h4>BRENDOVI</h4>
-                        <p>koje zastupamo</p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li>
-                        <h4>DISTRIBUCIJA </h4>
-                        <p>logistika i operativa </p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li>
-                        <h4>SARADANJA </h4>
-                        <p>prosirenje ponude</p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li>
-                        <h4>NOVOSTI</h4>
-                        <p>aktuelnosti</p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                    <li>
-                        <h4>KONTAKT</h4>
-                        <p>kontaktirajte nas</p>
-                    </li>
-                    <li> <img src="images/linijaMeni.png" alt="linijaMeni"></li>
-                </ul>
-            </nav>
-            
-            <img class="levoLinija" src="images/linijaIspodMenija.png" alt="linijaIspodMenija">
+                    <div class="crvenaLinija">
+                        <img src="images/Rectangle 126.png" alt="crvenaLinija">
+                    </div>
 
-        </header>
-    </body>
+                    <div class="smallText">Veleprodaja i maloprodaja kozmetike i kućne hemije</div>
+
+                    <div class="sivaLinija">
+                        <img src="images/Rectangle 127.png" alt="VelikaSivaLinija">
+                    </div>
+                </div>
+
+
+
+                <div class="elementiDole">
+                    <p>DVG Company d.o.o. je trgovinsko preduzeće osnovano 2008. godine u Subotici.
+                        Prvenstvena delatnost kompanije je veleprodaja kozmetike i kućne hemije.
+                        U potpunosti je u privatnom vlasništvu, sa sedištem u Subotici.
+                        Tu se nalazi distrubutivni centar i poslovne prostorije, sa ukupno 3000m2
+                        magacinskog prostora koji zadovoljava sve segmente u pogledu smeštaja,
+                        čuvanja i plasiranja robe.
+                    </p>
+
+                    <button class="btnOnama">Saznajte više o nama</button>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
 
 </html>

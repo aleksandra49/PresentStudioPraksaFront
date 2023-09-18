@@ -1,19 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Times New Roman", sans-serif;
 }
 
-body{
+body {
     max-width: 100%;
     height: 2000px;
     background-size: cover;
     background-attachment: fixed;
 }
 
-/*stil za header- jesike, logo i meni*/
-.header{
+/*stil za header- jezike, logo i meni*/
+.header {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,7 +32,7 @@ body{
     width: 100%;
     /*da na nam se ne bi lepili uz ivice ekrana*/
     padding: 0 5%;
-    
+
 }
 
 .header .logo {
@@ -44,17 +44,15 @@ body{
 
 .header .div1 .jezici ul li {
     /*da  ne bude jedno ispod drugog vec lepo da bude jedan pored drugog*/
-    display: inline-block; 
+    display: inline-block;
     margin-left: 20px;
 
 }
 
-.header ul {
-    
-}
+
 
 .header .div1 .jezici ul li a {
-    text-decoration: none;
+    /*text-decoration: none;*/
     font-family: 'Roboto';
     color: #595959;
     font-size: 14px;
@@ -68,11 +66,11 @@ body{
     text-decoration: none;
     color: #888787;
     font-weight: 400;
-   /* width: 47px
+    /* width: 47px
     height: 18px
     top: 31px
     left: 1288.64px*/
-    
+
 }
 
 
@@ -87,19 +85,19 @@ body{
     left: 122px;*/
     /*da mi lepo ispise sve u redovima kako teba a ne da sece redove*/
     white-space: nowrap;
-    
 
-    
+
+
 }
 
 .header .navbar ul {
-    
+
     display: flex;
     flex: 1;
     margin-left: 50px;
     margin-right: 50px;
     /*align-items: center;*/
-   
+
 }
 
 
@@ -112,9 +110,10 @@ body{
     flex: 1;
     list-style-type: none;
     text-align: center;
-    
-   
+
+
 }
+
 /*za font od menija za roditelja */
 .header .navbar ul li h4 {
     font-family: 'Roboto Condensed';
@@ -125,6 +124,7 @@ body{
     text-align: center;
 
 }
+
 /*za font od menija  za dete*/
 .header .navbar ul li p {
     font-family: 'Roboto';
@@ -135,8 +135,9 @@ body{
     text-align: center;
 
 }
+
 /*za brend za je dr boje jer je kliknuto an to*/
-.header .navbar ul  .brend {
+.header .navbar ul .brend {
     color: #888787;
 
 }
@@ -162,11 +163,158 @@ body{
 
 }*/
 
+/*Prikaz slika kada kliknemo*/
+
+.slideshow-container {
+
+    max-width: auto;
+    position: relative;
+    margin: auto;
+    background-color: #fff;
+    /*width: 100%;
+    height: 705px;
+    top: 137px;
+    padding: 673px, 16px, 8px, 16px;*/
+
+}
+
+.slideshow-container .strelica {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 555px;
+    left: 640px;
 
 
 
+}
+
+.slideshow-container .strelica:hover {
+    cursor: pointer;
+
+}
+
+/*slika  naslov tekst dugme*/
+
+main .divPosleSlajdova {
+    /*background-color: white;*/
+    display: flex;
+    padding: 80px 0;
+    /*razmak izmdju slike levo i desno*/
+    gap: 2rem;
+    position: relative;
+    background: #F4F4F4;
+
+}
 
 
 
+main .divPosleSlajdova .textDesno {
+    flex: 1;
+    margin-right: 10rem;
+    margin-left: 20px;
 
 
+}
+
+main .divPosleSlajdova .elementiGore .bigText {
+    width: 272px;
+    height: 50px;
+    top: 500px;
+    left: 765px;
+
+    /*da odvojim od teksta */
+    margin-top: 45px;
+
+    font-family: 'Roboto';
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #303030;
+
+}
+
+main .divPosleSlajdova .elementiGore .crvenaLinija {
+    width: 137px;
+    height: 6px;
+    top: 1019px;
+    left: 765px;
+
+}
+
+main .divPosleSlajdova .elementiGore .smallText {
+    width: 506px;
+    height: 68px;
+    top: 1052px;
+    left: 765px;
+
+    font-family: 'Inter';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #474747;
+
+    /*da odvojim od crvene linije*/
+    margin-top: 40px;
+}
+
+main .divPosleSlajdova .elementiGore .sivaLinija {
+    width: 524px;
+    height: 3px;
+    top: 1157px;
+    left: 765px;
+
+    /*background: #C4C4C466;*/
+
+    /*da odvojim od smalltext */
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+main .divPosleSlajdova .elementiDole p {
+    font-family: 'Roboto';
+
+    width: 524px;
+    height: 237px;
+    top: 1214px;
+    left: 765px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #474747;
+    /*glupi padding za izmejdu teksta i dugmeta*/
+    margin-bottom: -60px;
+
+}
+
+
+
+main .divPosleSlajdova .elementiDole .btnOnama {
+    
+    width: 184px;
+    height: 48px;
+    /*display: inline-block;*/
+    top: 1374px;
+    left: 765px;
+    /*da uvecamo test na btn*/
+    font-size: medium;
+    /*da na za obli dugme*/
+    border-radius: 4px;
+    gap: 8px;
+
+    background: #BF0F0F;
+    color: #fff;
+    /*da skine crni okvir sa dugmeta*/
+    border: 0;
+
+}
