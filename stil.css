@@ -141,6 +141,27 @@ body{
 
 }
 
+/*lijija ispod menija*/
+
+.header .levoLinija {
+    width: 1348px;
+    top: 137px;
+    left: 646px;
+    border: 1px;
+    /*angle: -0 deg;*/
+
+}
+
+/*.header .desnoLinija {
+    width: 680px;
+    top: 137px;
+    right: -11px;
+    border: 1px;
+    angle: -0 deg;
+
+
+}*/
+
 
 
 
