@@ -57,15 +57,95 @@ body{
     text-decoration: none;
     font-family: 'Roboto';
     color: #595959;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
 .header .div1 .jezici ul li .active {
     text-decoration: none;
     color: #888787;
     font-weight: 400;
-    size: 14px;
-    /*vidi jos ima svojih izgleda kao kako treba*/
+   /* width: 47px
+    height: 18px
+    top: 31px
+    left: 1288.64px*/
+    
 }
+
+
+/*meni*/
+
+.header .navbar {
+    display: contents;
+    /*njihovo mi smeta kada stavim nece lepo na sredinu*/
+    /*width: 1100px;
+    height: 64px;
+    top: 75px;
+    left: 122px;*/
+    /*da mi lepo ispise sve u redovima kako teba a ne da sece redove*/
+    white-space: nowrap;
+    
+
+    
+}
+
+.header .navbar ul {
+    
+    display: flex;
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+    /*align-items: center;*/
+   
+}
+
+
+.header .navbar ul li {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    list-style-type: none;
+    text-align: center;
+    
+   
+}
+/*za font od menija za roditelja */
+.header .navbar ul li h4 {
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
+/*za font od menija  za dete*/
+.header .navbar ul li p {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+/*za brend za je dr boje jer je kliknuto an to*/
+.header .navbar ul  .brend {
+    color: #888787;
+
+}
+
+
+
+
+
+
 
 
 
