@@ -637,7 +637,7 @@ main .triSlike p {
 
     margin-top: 10px;
 
-    
+
     background-color: #BF0F0F;
 }
 
@@ -679,7 +679,7 @@ main .triSlike p {
     margin-top: 10px;
     margin-bottom: -10px;
 
-    
+
     background-color: #BF0F0F;
 }
 
@@ -780,4 +780,108 @@ main .triSlike p {
     align-content: left;
 }
 
-/*.container .slider-wrapper .image-list .tekst-kartice {}*/
+
+
+/*Brendovi i slike sa dugmetom*/
+
+.zadnjiDivSaBrendovima {
+    margin-top: 80px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tekstiznadBrendova {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 506px;
+
+    height: 68px;
+    top: 3994px;
+    left: 466px;
+    color: #474747;
+
+}
+
+.tekstiznadBrendova::after {
+    /*da naprvaimo nasu sivu liniju*/
+
+    content: "";
+    display: block;
+    background-color: rgb(209, 201, 201);
+    align-items: center;
+    width: 524px;
+    height: 3px;
+    left: 457.5px;
+    margin-top: 10%;
+
+}
+
+/*izgled slika brendova*/
+.brendoviSlike {
+
+    display: flex;
+    align-items: center;
+
+    width: Hug (1, 060px);
+    height: Hug (161px);
+
+    margin-top: 7%;
+    top: 4146px;
+    left: 190px;
+    gap: 74px;
+
+}
+
+.brend {
+    width: 100%;
+}
+
+.brend p {
+    /*nece da stoji lepo kada dodam width*/
+   /* width: 44px;*/
+    height: 34px;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #474747;
+}
+
+
+.btn {
+    margin-top: 6%;
+
+    width: Hug (255px);
+    height: 50px;
+    top: 4382px;
+    left: 590px;
+    padding: 0px 16px 0px 16px;
+    border-radius: 4px;
+    gap: 8px;
+    background: #BF0F0F;
+    border: 2px;
+    align-items: center;
+    margin-bottom: 3%;
+
+}
+
+.btn p {
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+
+}
