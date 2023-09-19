@@ -497,11 +497,13 @@ main .triSlike p {
     /*ovde sam stavila onaj logo sa leve strane kod slika proizvoda*/
 
     background-image: url('images/logoKodProizvoda.png');
-    background-size: auto; /* Očuvaće prirodnu veličinu slike */
-    background-position: left bottom; /* Postavlja poziciju slike u levom donjem uglu */
+    background-size: auto;
+    /* Očuvaće prirodnu veličinu slike */
+    background-position: left bottom;
+    /* Postavlja poziciju slike u levom donjem uglu */
     /*background-position: left calc(100%  - 120px); /* Pomeranje slike 10 piksela od dna */
     background-repeat: no-repeat;
-    
+
 
 }
 
@@ -549,13 +551,15 @@ main .triSlike p {
     width: 52%;
     margin-top: 50px;
     margin-left: 10px;
-    
-  }
-  .slider-wrapper {
+
+}
+
+.slider-wrapper {
     position: relative;
-    
-  }
-  .slider-wrapper .slide-button {
+
+}
+
+.slider-wrapper .slide-button {
     position: absolute;
     top: 50%;
     outline: none;
@@ -572,18 +576,24 @@ main .triSlike p {
     justify-content: center;
     border-radius: 50%;
     transform: translateY(-50%);
-  }
-  .slider-wrapper .slide-button:hover {
+}
+
+.slider-wrapper .slide-button:hover {
     background: #404040;
-  }
-  .slider-wrapper .slide-button#prev-slide {
+}
+
+.slider-wrapper .slide-button#prev-slide {
     left: -25px;
     display: none;
-  }
-  .slider-wrapper .slide-button#next-slide {
+}
+
+.slider-wrapper .slide-button#next-slide {
     right: -25px;
-  }
-  .slider-wrapper .image-list {
+}
+
+
+/*slike*/
+.slider-wrapper .image-list {
     height: 325px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -594,22 +604,121 @@ main .triSlike p {
     margin-bottom: 20px;
     overflow-x: auto;
     scrollbar-width: none;
-  }
-  .slider-wrapper .image-list::-webkit-scrollbar {
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
     display: none;
-  }
-  .slider-wrapper .image-list .image-item {
+}
+
+.slider-wrapper .image-list .image-item {
+    /*content: "";*/
+    /*width: 52.73px;*/
+    /*height: 2px;*/
+    /*top: 304px;*/
+    /*left: 524.47px;*/
+    /*background: #BF0F0F;
+    display: block;
+    justify-content: right;*/
+    position: relative;
     width: 250px;
     height: 400px;
     object-fit: cover;
-  }
-  .container .slider-scrollbar {
+}
+
+/*za after i linije da se pokaze*/
+.tekst-kartice::after {
+    content: '';
+    display: block;
+
+    width: 52.73px;
+    height: 2px;
+    top: 500px;
+    left: 524.47px;
+
+    margin-top: 10px;
+
+    
+    background-color: #BF0F0F;
+}
+
+.tekst-kartice {
+
+    position: absolute;
+    top: 40%;
+    /* Postavlja tekst na sredinu slike po vertikali */
+    left: 50%;
+    /* Postavlja tekst na sredinu slike po horizontali */
+    transform: translate(-55%, 260%);
+    /* Centrira tekst u odnosu na sredinu slike */
+    color: #474747;
+
+    /*padding: - 15px;*/
+    width: 75%;
+    /* Prilagodite širinu teksta prema potrebama */
+    text-align: center;
+
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+/*za after i linije da se pokaze*/
+.tekst-karticeDuze::after {
+    content: '';
+    display: block;
+
+    width: 52.73px;
+    height: 2px;
+    top: 500px;
+    left: 524.47px;
+
+    margin-top: 10px;
+    margin-bottom: -10px;
+
+    
+    background-color: #BF0F0F;
+}
+
+.tekst-karticeDuze {
+
+    position: absolute;
+    top: 30%;
+    /* Postavlja tekst na sredinu slike po vertikali */
+    left: 40%;
+    /* Postavlja tekst na sredinu slike po horizontali */
+    transform: translate(-55%, 260%);
+    /* Centrira tekst u odnosu na sredinu slike */
+    color: #474747;
+
+    /*padding: - 15px;*/
+    width: 60%;
+    /* Prilagodite širinu teksta prema potrebama */
+    text-align: center;
+
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+
+
+/*slider*/
+.container .slider-scrollbar {
     height: 24px;
     width: 100%;
     display: flex;
     align-items: center;
-  }
-  .slider-scrollbar .scrollbar-track {
+}
+
+.slider-scrollbar .scrollbar-track {
     background: #ccc;
     width: 100%;
     height: 2px;
@@ -617,11 +726,13 @@ main .triSlike p {
     align-items: center;
     border-radius: 4px;
     position: relative;
-  }
-  .slider-scrollbar:hover .scrollbar-track {
+}
+
+.slider-scrollbar:hover .scrollbar-track {
     height: 4px;
-  }
-  .slider-scrollbar .scrollbar-thumb {
+}
+
+.slider-scrollbar .scrollbar-thumb {
     position: absolute;
     background: #000;
     top: 0;
@@ -630,22 +741,25 @@ main .triSlike p {
     height: 100%;
     cursor: grab;
     border-radius: inherit;
-  }
-  .slider-scrollbar .scrollbar-thumb:active {
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
     cursor: grabbing;
     height: 8px;
     top: -2px;
-  }
-  .slider-scrollbar .scrollbar-thumb::after {
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: -10px;
     bottom: -10px;
-  }
-  /* Styles for mobile and tablets */
- /* @media only screen and (max-width: 1023px) {
+}
+
+/* Styles for mobile and tablets */
+/* @media only screen and (max-width: 1023px) {
     .slider-wrapper .slide-button {
       display: none !important;
     }
@@ -662,6 +776,8 @@ main .triSlike p {
       width: 20%;
     }*/
 
-    .tekstIProizvodi .logoKodProizvoda {
-        align-content: left;
-    }
+.tekstIProizvodi .logoKodProizvoda {
+    align-content: left;
+}
+
+/*.container .slider-wrapper .image-list .tekst-kartice {}*/
