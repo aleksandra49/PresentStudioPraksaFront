@@ -446,7 +446,7 @@ main .triSlike p {
     text-align: justify;
     white-space: pre-wrap;
     /*izmedju elementa pravi razmak*/
-    letter-spacing: 8px;
+    letter-spacing: 7px;
     
 }
 
@@ -471,5 +471,14 @@ main .triSlike p {
     letter-spacing: 0em;
     text-align: center;
     color: #fff;
+    /*da smanjim prostor izmmedju  brojeva i teksta ispod*/
+    margin-top: -20px;
+
+}
+
+.naslovDVG .statistikaBrojke .statistikaLinija {
+    margin-top: -80px;
+    align-items: center;
+
 
 }
