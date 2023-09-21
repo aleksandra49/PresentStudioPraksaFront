@@ -246,6 +246,13 @@ body {
 
 }
 
+.divPosleSlajdova img {
+    width: 710px;
+    height: 504px;
+    top: 915px;
+
+}
+
 
 
 .divPosleSlajdova .textDesno {
@@ -340,7 +347,7 @@ body {
 
     color: #474747;
     /*glupi padding za izmejdu teksta i dugmeta #474747;*/
-    margin-bottom: -60px;
+    margin-bottom: -80px;
 
 }
 
@@ -573,7 +580,7 @@ body {
     content: '';
     display: block;
     background: #BF0F0F;
-    
+
     width: 137px;
     height: 6px;
     top: 2668px;
