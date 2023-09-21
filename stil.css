@@ -275,11 +275,16 @@ body {
 
 }
 
-.divPosleSlajdova .elementiGore .crvenaLinija {
+.divPosleSlajdova .elementiGore .bigText::after {
+    content: '';
+    display: block;
+    background: #BF0F0F;
     width: 137px;
     height: 6px;
     top: 1019px;
     left: 765px;
+
+    margin-top: 20px;
 
 }
 
@@ -302,18 +307,22 @@ body {
     margin-top: 40px;
 }
 
-.divPosleSlajdova .elementiGore .sivaLinija {
+.divPosleSlajdova .elementiGore .smallText::after {
+    content: '';
+    display: block;
+    background: #C4C4C466;
     width: 524px;
     height: 3px;
     top: 1157px;
     left: 765px;
-
-    /*background: #C4C4C466;*/
-
-    /*da odvojim od smalltext */
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 55px;
 }
+
+.elementiDole {
+    margin-top: 100px;
+}
+
 
 .divPosleSlajdova .elementiDole p {
     font-family: 'Roboto';
