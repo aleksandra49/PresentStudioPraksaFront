@@ -113,6 +113,9 @@ body {
     flex: 1;
     list-style-type: none;
     text-align: center;
+    border: 0.5px solid #88878766;
+    /*padding: 0.8rem;*/
+    height: 62px;
 
 
 }
