@@ -566,13 +566,23 @@ body {
     text-align: center;
 
     color: #474747;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
-.naslovDVG .redLineBrojke {
-    margin-bottom: 80px;
-}
+.naslovDVG .brojke::after {
+    content: '';
+    display: block;
+    background: #BF0F0F;
+    
+    width: 137px;
+    height: 6px;
+    top: 2668px;
+    left: 650px;
+    margin-left: 605px;
+    margin-top: 20px;
 
+
+}
 
 /*statistika*/
 
@@ -632,13 +642,7 @@ body {
 
 }
 
-.naslovDVG .statistikaBrojke .statistikaLinija {
-    /*da bi mis elinije sive digle u nivou borjeva i slova da stoji izmedju*/
-    margin-top: -80px;
-    align-items: center;
 
-
-}
 
 /*naslov proizvoda i slike prizvoda i tekst*/
 
