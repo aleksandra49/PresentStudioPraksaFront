@@ -1164,6 +1164,7 @@ footer .drugiDivKontakt .naslov {
     /*word-wrap: break-word;*/
     /*overflow-wrap: break-word;*/
     width: 200px !important;
+    height: 20px;
 
     /*lokacija se uveca*/
 }
