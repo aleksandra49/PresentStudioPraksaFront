@@ -88,6 +88,7 @@ body {
     left: 122px;*/
     /*da mi lepo ispise sve u redovima kako teba a ne da sece redove*/
     white-space: nowrap;
+    width: 100%;
 
 
 
@@ -157,6 +158,74 @@ body {
     border: 1px;
     /*angle: -0 deg;*/
 
+}
+
+header .div1 .burger {
+    display: none;
+}
+
+
+@media only screen and (max-width:730px) {
+    .header .div1 {
+       
+        justify-content: flex-start;
+        /*da nam rasiri na celu stranicu*/
+        display: flex;
+        /*da na nam se ne bi lepili uz ivice ekrana*/
+        padding: 0 10%;
+    
+    }
+
+    
+
+    .header .navbar .nav-links {
+        display: none;
+      }
+    .header .div1 .burger {
+        margin-left: 150px;
+        display: block;
+    }
+
+    /*.header .navbar .burger, .div1 {
+        display: block;
+        background-color: #fff;
+        
+        
+        
+      }*/
+
+      .header .div1 .jezici {
+        display: none;
+      }
+      .header .div1 .jezici.show{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header .navbar .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 0px;
+        background-color: #ffffff;
+        align-items: center;
+        
+      }
+
+      .header .navbar .nav-links li {
+        display: flex;
+    
+      }
+    
+      .header .navbar .nav-links li h3 {
+        display: block;
+        font-size: 10px;
+      }
+    
+      .header .navbar .nav-links li p {
+        display: block;
+    
+      }
 }
 
 
@@ -925,29 +994,10 @@ body {
     bottom: -10px;
 }
 
-/* Styles for mobile and tablets */
-/* @media only screen and (max-width: 1023px) {
-    .slider-wrapper .slide-button {
-      display: none !important;
-    }
-    .slider-wrapper .image-list {
-      gap: 10px;
-      margin-bottom: 15px;
-      scroll-snap-type: x mandatory;
-    }
-    .slider-wrapper .image-list .image-item {
-      width: 280px;
-      height: 380px;
-    }
-    .slider-scrollbar .scrollbar-thumb {
-      width: 20%;
-    }*/
 
 .tekstIProizvodi .logoKodProizvoda {
     align-content: left;
 }
-
-
 
 /*Brendovi i slike sa dugmetom*/
 

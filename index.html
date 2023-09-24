@@ -28,6 +28,7 @@
                 <!-- alt pomaze nam da ako nece da se ucita sliak da ispise logo-->
                 <img src="./images/logo.png" alt="logo" />
             </div>
+            <div class="burger"> &#x2630;</div>
             <div class="jezici">
                 <ul>
                     <!--# znaci da nece doci do preusmeravanja na link s obzirom da stranica nece biti funk-->
@@ -81,6 +82,17 @@
         <!-- fali border-->
         <!-- <img class="levoLinija" src="images/linijaIspodMenija.png" alt="linijaIspodMenija"> -->
     </header>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const jeziciLinks = document.querySelector('.jezici');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            jeziciLinks.classList.toggle('show');
+            navLinks.classList.toggle('show');
+        });
+    </script>
 
 
     <!-- glavni deo stranice-->
