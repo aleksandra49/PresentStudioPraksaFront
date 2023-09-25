@@ -348,7 +348,7 @@ header .div1 .burger,
         flex-direction: column;
         position: relative;
         top: 0px;
-        background-color: #ffffff;
+        /*background-color: #ffffff;*/
         align-items: center;
 
     }
