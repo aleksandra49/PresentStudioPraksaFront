@@ -360,7 +360,7 @@ header .div1 .burger {
     background: white;
 }
 
-.swiper-slide {
+swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -369,10 +369,10 @@ header .div1 .burger {
     align-items: center;
 }
 
-.swiper-slide img {
+swiper-slide img {
     display: block;
-    width: 640px;
-    height: 480px;
+    width: 100%;
+    height: 100%; 
     object-fit: cover;
 }
 
