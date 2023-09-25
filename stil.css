@@ -22,21 +22,21 @@ body {
 :root {
     --header-background-color: white;
     --header-div1-background-color: #D9D9D9;
-    --header-div1-jezici-ul-li-a-color:#595959;
+    --header-div1-jezici-ul-li-a-color: #595959;
     --header-navbar-ul-brend-color: #888787;
-    --bigText-color:#303030;
-    --smallText-color:#474747;
-    --elementiDole-p-color:#474747;
+    --bigText-color: #303030;
+    --smallText-color: #474747;
+    --elementiDole-p-color: #474747;
     --triSlike-background-color: white;
     --triSlike-p-color: black;
     --naslovDVG-background-color: white;
-    --naslovDVG-dvg-color:#303030;
-    --naslovDVG-brojke-color:#474747;
-    --tekstIProizvodi-background-color:#F4F4F4;
+    --naslovDVG-dvg-color: #303030;
+    --naslovDVG-brojke-color: #474747;
+    --tekstIProizvodi-background-color: #F4F4F4;
     --tekstIProizvodi-color: black;
-    --zadnjiDivSaBrendovima-background-color:#fff;
-    --tekstiznadBrendova-color:#474747;
-    --footerDole-color:gray;
+    --zadnjiDivSaBrendovima-background-color: #fff;
+    --tekstiznadBrendova-color: #474747;
+    --footerDole-color: gray;
 }
 
 
@@ -45,28 +45,29 @@ body {
     /*color: white;*/
     --header-background-color: #444141;
     --header-div1-background-color: #A6A1A1;
-    --header-div1-jezici-ul-li-a-color:white;
-    --header-navbar-ul-brend-color:white;
+    --header-div1-jezici-ul-li-a-color: white;
+    --header-navbar-ul-brend-color: white;
     --header-navbar-ul-li-color: white;
-    --bigText-color:white;
-    --smallText-color:white;
-    --elementiDole-p-color:white;
+    --bigText-color: white;
+    --smallText-color: white;
+    --elementiDole-p-color: white;
     --triSlike-background-color: #A6A1A1;
     --triSlike-p-color: white;
     --naslovDVG-background-color: #A6A1A1;
-    --naslovDVG-dvg-color:white;
-    --naslovDVG-brojke-color:white;
-    --tekstIProizvodi-background-color:#A6A1A1;
+    --naslovDVG-dvg-color: white;
+    --naslovDVG-brojke-color: white;
+    --tekstIProizvodi-background-color: #A6A1A1;
     --tekstIProizvodi-color: white;
-    --zadnjiDivSaBrendovima-background-color:#A6A1A1;
-    --tekstiznadBrendova-color:white;
-    --footerDole-color:white;
+    --zadnjiDivSaBrendovima-background-color: #A6A1A1;
+    --tekstiznadBrendova-color: white;
+    --footerDole-color: white;
 }
 
 
 /*ovde da olaksam menjanej u dark mode da ne moram da menjam u original kodu, kako za koji element*/
 .dark-mode .header .div1 .jezici ul li .active {
-    color: white; /* Bela boja teksta u dark modu */
+    color: white;
+    /* Bela boja teksta u dark modu */
 }
 
 .dark-mode .brend p {
@@ -75,17 +76,17 @@ body {
 
 .dark-mode .divPosleSlajdova {
     background-color: #A6A1A1;
-    
+
 }
 
 body {
-    background-color: var(--background-color);   
+    background-color: var(--background-color);
 }
 
 /*.dark-mode img {
     filter: brightness(70%); 
 }*/
- 
+
 
 /* Stilovi za prekidač */
 .switch {
@@ -103,7 +104,8 @@ body {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    border-radius: 34px; /* Dodajte zaobljenost za prekidač */
+    border-radius: 34px;
+    /* Dodajte zaobljenost za prekidač */
     transition: 0.4s;
 }
 
@@ -115,19 +117,20 @@ body {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    border-radius: 50%; /* Dodajte zaobljenost za dugme prekidača */
+    border-radius: 50%;
+    /* Dodajte zaobljenost za dugme prekidača */
     transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #444141;
 }
 
-input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #444141;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
@@ -298,72 +301,72 @@ input {
 
 }
 
-header .div1 .burger {
+/*da mi se ne prikazuju ikone od burger menija*/
+header .div1 .burger,
+.close-icon {
     display: none;
 }
 
 
 @media only screen and (max-width:730px) {
     .header .div1 {
-       
+
         justify-content: flex-start;
         /*da nam rasiri na celu stranicu*/
         display: flex;
         /*da na nam se ne bi lepili uz ivice ekrana*/
         padding: 0 10%;
-    
+
     }
 
-    
+
 
     .header .navbar .nav-links {
         display: none;
-      }
+    }
+
     .header .div1 .burger {
         margin-left: 150px;
         display: block;
     }
 
-    /*.header .navbar .burger, .div1 {
-        display: block;
-        background-color: #fff;
-        
-        
-        
-      }*/
-
-      .header .div1 .jezici {
+    .header .div1 .close-icon {
         display: none;
-      }
-      .header .div1 .jezici.show{
+    }
+
+    .header .div1 .jezici {
+        display: none;
+    }
+
+    .header .div1 .jezici.show {
         display: flex;
         flex-direction: column;
-      }
+    }
 
-      .header .navbar .nav-links.show {
+    .header .navbar .nav-links.show {
         display: flex;
         flex-direction: column;
         position: relative;
         top: 0px;
         background-color: #ffffff;
         align-items: center;
-        
-      }
 
-      .header .navbar .nav-links li {
+    }
+
+    .header .navbar .nav-links li {
         display: flex;
-    
-      }
-    
-      .header .navbar .nav-links li h3 {
+
+    }
+
+    .header .navbar .nav-links li h3 {
         display: block;
         font-size: 10px;
-      }
-    
-      .header .navbar .nav-links li p {
+    }
+
+    .header .navbar .nav-links li p {
         display: block;
-    
-      }
+
+    }
 }
 
 
@@ -406,7 +409,7 @@ swiper-slide {
 swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
 }
 

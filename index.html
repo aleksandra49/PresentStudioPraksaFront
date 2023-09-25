@@ -35,6 +35,7 @@
             </label>
             <!--Burger menu-->
             <div class="burger"> &#x2630;</div>
+            <div class="close-icon">&#x2716;</div>
 
             <div class="jezici">
                 <ul>
@@ -90,13 +91,41 @@
     </header>
 
     <script>
-        const burger = document.querySelector('.burger');
+        const burgerIcon = document.querySelector('.burger');
+        const closeIcon = document.querySelector('.close-icon');
         const jeziciLinks = document.querySelector('.jezici');
         const navLinks = document.querySelector('.nav-links');
 
-        burger.addEventListener('click', () => {
+        // Funkcija za postavljanje ikonica na osnovu širine ekrana
+        function setIcons() {
+            const windowWidth = window.innerWidth;
+
+            if (windowWidth <= 730) {
+                burgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                burgerIcon.style.display = 'none';
+                closeIcon.style.display = 'none';
+            }
+        }
+
+        // Pozovi funkciju prilikom učitavanja stranice i promene veličine ekrana
+        window.addEventListener('load', setIcons);
+        window.addEventListener('resize', setIcons);
+
+        // Dodaj event listenere za ikonice kao u prethodnom odgovoru
+        burgerIcon.addEventListener('click', () => {
             jeziciLinks.classList.toggle('show');
             navLinks.classList.toggle('show');
+            burgerIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', () => {
+            jeziciLinks.classList.toggle('show');
+            navLinks.classList.toggle('show');
+            burgerIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
         });
     </script>
     <script>
