@@ -94,6 +94,7 @@ body {
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-left: auto;
 }
 
 .slider {
@@ -325,12 +326,17 @@ header .div1 .burger,
         display: none;
     }
 
+    .switch{
+        margin-left: auto;
+     }
+
     .header .div1 .burger {
-        margin-left: 150px;
+        margin-left: 15px;
         display: block;
     }
 
     .header .div1 .close-icon {
+        margin-left: 30px;
         display: none;
     }
 
