@@ -13,9 +13,69 @@ body {
     background-image: url('images/distribucijaParallax.jpg');
     background-size: cover;
     background-attachment: fixed;
-
     /*background-clip: content-box;*/
 }
+
+/*---------------------POPUP -------------------*/
+ /* Stil za popup kontejner */
+ .popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /*da mi centrira iznad celog dizajna jer se pre nalazio ispod u paraplaxu*/
+    text-align: center;
+}
+
+/* Stil za sliku u popupu */
+.popup-image {
+    filter: brightness(50%);
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Stil za zatvaranje popupa */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    z-index: 2; 
+}
+
+/* Stil za tekst u popupu */
+.popup-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    width: 70%; 
+    text-shadow: 2px 2px black;
+    
+}
+
+/* Stil za tekst u gornjem levom uglu */
+.popup-textDvg {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 34px;
+    text-shadow: 2px 2px black;
+}
+
+
+/*---------------------POPUP -------------------------------*/
+
+
 
 /*-------------------DARK MODE ----------------------------*/
 /*ovde je koja je prvobitna boja elemenata bila*/
@@ -76,7 +136,6 @@ body {
 
 .dark-mode .divPosleSlajdova {
     background-color: #A6A1A1;
-
 }
 
 body {
@@ -86,7 +145,6 @@ body {
 /*.dark-mode img {
     filter: brightness(70%); 
 }*/
-
 
 /* Stilovi za prekidač */
 .switch {
@@ -143,10 +201,11 @@ input {
 }
 
 
-
-
 /*-------------------DARK MODE END ----------------------------*/
 
+
+
+/*-------------------DIZAJN CELE STRANICE ----------------------------*/
 
 
 /*stil za header- jezike, logo i meni*/
@@ -188,7 +247,6 @@ input {
     /*da  ne bude jedno ispod drugog vec lepo da bude jedan pored drugog*/
     display: inline-block;
     margin-left: 20px;
-
 }
 
 .header .div1 .jezici ul li a {
@@ -212,7 +270,6 @@ input {
     height: 18px
     top: 31px
     left: 1288.64px*/
-
 }
 
 
@@ -228,9 +285,6 @@ input {
     /*da mi lepo ispise sve u redovima kako teba a ne da sece redove*/
     white-space: nowrap;
     width: 100%;
-
-
-
 }
 
 .header .navbar ul {
@@ -240,7 +294,6 @@ input {
     margin-left: 50px;
     margin-right: 50px;
     /*align-items: center;*/
-
 }
 
 
@@ -256,10 +309,7 @@ input {
     border: 0.5px solid #88878766;
     /*padding: 0.8rem;*/
     height: 62px;
-
     color: var(--header-navbar-ul-li-color);
-
-
 }
 
 /*za font od menija za velika slova */
@@ -270,7 +320,6 @@ input {
     line-height: 26px;
     letter-spacing: 0px;
     text-align: center;
-
 }
 
 /*za font od menija  za mala slova ispod velikih*/
@@ -281,14 +330,12 @@ input {
     line-height: 14px;
     letter-spacing: 0em;
     text-align: center;
-
 }
 
 /*za brend za je dr boje jer je kliknuto an to*/
 .header .navbar ul .brend {
     /*color: #888787;*/
     color: var(--header-navbar-ul-brend-color);
-
 }
 
 /*lijija ispod menija*/
@@ -299,7 +346,6 @@ input {
     left: 646px;
     border: 1px;
     /*angle: -0 deg;*/
-
 }
 
 /*da mi se ne prikazuju ikone od burger menija*/
@@ -356,12 +402,10 @@ header .div1 .burger,
         top: 0px;
         /*background-color: #ffffff;*/
         align-items: center;
-
     }
 
     .header .navbar .nav-links li {
         display: flex;
-
     }
 
     .header .navbar .nav-links li h3 {
@@ -371,7 +415,6 @@ header .div1 .burger,
 
     .header .navbar .nav-links li p {
         display: block;
-
     }
 }
 
@@ -432,8 +475,6 @@ swiper-slide img {
     position: relative;
     margin: auto;
     background-color: #fff;
-
-
 }
 
 .slideshow-container .strelica {
@@ -446,8 +487,9 @@ swiper-slide img {
 
 .slideshow-container .strelica:hover {
     cursor: pointer;
-
 }
+
+
 
 /*slika  naslov tekst dugme*/
 
@@ -459,17 +501,14 @@ swiper-slide img {
     gap: 2rem;
     position: relative;
     background: #F4F4F4;
-
 }
 
 .divPosleSlajdova img {
     /*width: 710px;
     height: 504px;
     top: 915px;*/
-
     width: 100%;
     height: 100%;
-
 }
 
 
@@ -478,7 +517,6 @@ swiper-slide img {
     flex: 1;
     margin-right: 10rem;
     margin-left: 20px;
-
 }
 
 .divPosleSlajdova .elementiGore .bigText {
@@ -499,8 +537,6 @@ swiper-slide img {
 
     /*color: #303030;*/
     color: var(--bigText-color);
-
-
 }
 
 .divPosleSlajdova .elementiGore .bigText::after {
@@ -513,7 +549,6 @@ swiper-slide img {
     left: 765px;
 
     margin-top: 20px;
-
 }
 
 .divPosleSlajdova .elementiGore .smallText {
@@ -571,7 +606,6 @@ swiper-slide img {
     color: var(--elementiDole-p-color);
     /*glupi padding za izmejdu teksta i dugmeta #474747;*/
     margin-bottom: -80px;
-
 }
 
 
@@ -593,7 +627,6 @@ swiper-slide img {
     color: #fff;
     /*da skine crni okvir sa dugmeta*/
     border: 0;
-
 }
 
 /*pre nego sto sam implementirala parapllax ovakav je kod bio samo prikaz slike*/
@@ -653,11 +686,8 @@ swiper-slide img {
     left: 652px;
     right: 50px;
     align-items: center;
-
     margin-top: 15px;
     margin-left: 225px;
-
-
     background-color: #BF0F0F;
 }
 
@@ -675,6 +705,8 @@ swiper-slide img {
 
 }*/
 
+/*TRI SLIKE PROIZVODA*/
+
 .triSlike {
     margin-top: 55px;
     /*margin-left: 30px;*/
@@ -688,7 +720,6 @@ swiper-slide img {
     /*background-color: white;*/
     background-color: var(--triSlike-background-color);
     padding-bottom: 130px;
-
 }
 
 .triSlike .slika {
@@ -701,7 +732,6 @@ swiper-slide img {
     background: white;
     margin-top: 65px;
     position: relative;
-
 }
 
 
@@ -716,8 +746,6 @@ swiper-slide img {
     text-align: left;
 
     color: var(--triSlike-p-color);
-
-
 }
 
 .triSlike p::after {
@@ -731,7 +759,6 @@ swiper-slide img {
     left: 104px;
     margin-top: 10px;
     background-color: #BF0F0F;
-
 }
 
 /*.triSlike .slika::before {
@@ -746,8 +773,6 @@ swiper-slide img {
 
 
     background-color: #BF0F0F;
-
-
 }*/
 
 /* .triSlike .slika:nth-child(3)::before {
@@ -761,11 +786,11 @@ swiper-slide img {
     background-color: #BF0F0F;  
 } */
 
-/*naslov dvg i brojke i redline*/
+
+
+/*NASLOV DVG BROJEK I RED LINE*/
 
 .naslovDVG {
-
-
     text-align: center;
     /*margin-top: 150px;*/
     justify-content: center;
@@ -773,7 +798,6 @@ swiper-slide img {
 
     /*background-color: #fff;*/
     background-color: var(--naslovDVG-background-color);
-
 }
 
 .naslovDVG .dvg {
@@ -788,8 +812,6 @@ swiper-slide img {
 
     /*color: #303030;*/
     color: var(--naslovDVG-dvg-color);
-
-
 }
 
 .naslovDVG .brojke {
@@ -817,11 +839,9 @@ swiper-slide img {
     left: 650px;
     margin-left: 605px;
     margin-top: 20px;
-
-
 }
 
-/*statistika*/
+/*STATISTIKA*/
 
 .naslovDVG .redLineBackground {
     width: 100%;
@@ -840,7 +860,6 @@ swiper-slide img {
     width: 100%;
     top: 2767px;
     left: -1px;
-
 }
 
 .naslovDVG .statistikaBrojke ul {
@@ -850,7 +869,6 @@ swiper-slide img {
     white-space: pre-wrap;
     /*izmedju elementa pravi razmak*/
     letter-spacing: 7px;
-
 }
 
 .naslovDVG .statistikaBrojke .broj {
@@ -863,7 +881,6 @@ swiper-slide img {
     text-align: center;
 
     color: #fff;
-
 }
 
 .naslovDVG .statistikaBrojke p {
@@ -876,12 +893,11 @@ swiper-slide img {
     color: #fff;
     /*da smanjim prostor izmmedju  brojeva i teksta ispod*/
     margin-top: -20px;
-
 }
 
 
 
-/*naslov proizvoda i slike prizvoda i tekst*/
+/*NASLOV PROIZVODA I SLIKE PROIZVODA I TEKST */
 
 .tekstIProizvodi {
     /*background: #F4F4F4;*/
@@ -902,8 +918,6 @@ swiper-slide img {
     /* Postavlja poziciju slike u levom donjem uglu */
     /*background-position: left calc(100%  - 120px); /* Pomeranje slike 10 piksela od dna */
     background-repeat: no-repeat;
-
-
 }
 
 .tekstIProizvodi .textNasiProizvodi {
@@ -915,7 +929,6 @@ swiper-slide img {
     line-height: 34px;
     letter-spacing: 0em;
     text-align: center;
-
 }
 
 .tekstIProizvodi .sivalinijaProizvodi {
@@ -924,8 +937,6 @@ swiper-slide img {
     width: 524px;
     height: 3px;
     margin-bottom: 50px;
-
-
 }
 
 .tekstIProizvodi .textOkvalitetu {
@@ -938,10 +949,9 @@ swiper-slide img {
     /*ovde sam rekla da tekst moze smao na toliko da se rasiri */
     width: 524px;
     height: 67px;
-
 }
 
-/*Slider za slike proizvoda*/
+/*SLIDER ZA SLIKE PROIZVODA*/
 
 .container {
     /*velicina slajda*/
@@ -950,7 +960,6 @@ swiper-slide img {
     width: 52%;
     margin-top: 50px;
     margin-left: 10px;
-
 }
 
 .slider-wrapper {
@@ -991,7 +1000,7 @@ swiper-slide img {
 }
 
 
-/*slike*/
+/*SLIKE*/
 .slider-wrapper .image-list {
     height: 325px;
     display: grid;
@@ -1033,10 +1042,7 @@ swiper-slide img {
     height: 2px;
     top: 500px;
     left: 524.47px;
-
     margin-top: 10px;
-
-
     background-color: #BF0F0F;
 }
 
@@ -1062,7 +1068,6 @@ swiper-slide img {
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
-
 }
 
 /*za after i linije da se pokaze*/
@@ -1077,8 +1082,6 @@ swiper-slide img {
 
     margin-top: 10px;
     margin-bottom: -10px;
-
-
     background-color: #BF0F0F;
 }
 
@@ -1109,7 +1112,7 @@ swiper-slide img {
 }
 
 
-/*slider*/
+/*SLIDER*/
 .container .slider-scrollbar {
     height: 24px;
     width: 100%;
@@ -1162,7 +1165,7 @@ swiper-slide img {
     align-content: left;
 }
 
-/*Brendovi i slike sa dugmetom*/
+/*BRENDOVI i slike sa dugmetom*/
 
 .zadnjiDivSaBrendovima {
     /*margin-top: 80px;*/

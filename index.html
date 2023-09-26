@@ -21,6 +21,36 @@
 
 
 <body>
+    <!--POPUP OBLACIC SA SLIKOM I TEKSTOM KOJI SE POJAVLJUJE POSLE 4 SEKUNDE-->
+
+    <div class="popup-container" id="popup">
+        <span class="close-button" onclick="closePopup()">&#10006;</span>
+        <img src="./images/popup7.jpg" alt="Popup Slika" class="popup-image">
+        <div class="popup-textDvg">
+            <p>DVG Company</p>
+        </div>
+        <div class="popup-text">
+            <p>Kupovinom u našoj radnji ostvarujete popust od 15% pri prvoj kupovini!</p>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(showPopup, 4000); // Prikazi popup nakon 4 sekunde
+
+        function showPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+
+<!--TELO CELE STRANICE TJ DIZANJ STRANICE-->
+
+
     <header class="header">
         <div class="div1">
             <div class="logo">
