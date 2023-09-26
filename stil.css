@@ -356,6 +356,27 @@ header .div1 .burger,
 
 
 @media only screen and (max-width:900px) {
+
+
+    .popup-container {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        top: 40%;
+        left: 60%;
+        transform: translate(-60%, -40%);
+        width: 50%;
+    }
+    .popup-text {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        font-size: 15px;
+    }
+    .popup-textDvg {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        top: 10%;
+        font-size: 20px;
+    }
+
+
+
     .header .div1 {
 
         justify-content: flex-start;
