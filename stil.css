@@ -420,6 +420,72 @@ header .div1 .burger,
     .divPosleSlajdova{
         flex-direction: column;
     }
+
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    .triSlike {
+        flex-direction: column;
+    }
+
+    .naslovDVG .statistikaBrojke ul {
+        flex-direction: column;
+    }
+
+    .footerGore {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    footer .drugiDivKontakt::before,
+    footer .treciDivSadrzaj::before,
+    footer .cetvrtiDivPracenje::before {
+        display: none;
+    }
+
+    footer .drugiDivKontakt .naslov {
+        padding-top: 35px;
+    }
+
+    footer .treciDivSadrzaj {
+        padding-top: 35px;
+
+    }
+
+    footer .cetvrtiDivPracenje {
+       /* padding-top: 35px;*/
+        padding: 0 0 0 0 ;
+       
+    }
+
+    .drugiDivKontakt .adresa, .email, .telefon {
+        padding-top: 15px;
+    }
+
+    footer .footerDole {
+        flex-direction: column;
+        text-align: center;
+        
+        
+    }
+
+    footer .footerDole .copyText {
+        margin-left: 0;
+    }
+    footer .footerDole .privatnost {
+        text-align: center;
+    }
+
+    footer .footerDole .studio {
+        text-align: center;
+        
+    }
+    footer .footerDole .powered {
+        margin-right: 0px;
+    }
 }
 
 
@@ -850,29 +916,25 @@ swiper-slide img {
     height: 6px;
     top: 2668px;
     left: 650px;
-    margin-left: 605px;
+    /*margin-left: 605px;
+    margin-top: 20px;*/
+    margin:auto;
     margin-top: 20px;
 }
 
 /*STATISTIKA*/
 
-.naslovDVG .redLineBackground {
-    width: 100%;
-}
+
 
 .naslovDVG .statistikaBrojke {
-    /*preko ovog mi ulazi tekst u sliku*/
-    margin-top: -150px;
-    /*align-items: center;
-    justify-content: center;
+    background-image: url('./images/zaStatistikuBackground.png');
+    padding: 50px;
     display: flex;
-    flex: 1;*/
-    display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    top: 2767px;
-    left: -1px;
 }
 
 .naslovDVG .statistikaBrojke ul {
@@ -885,7 +947,6 @@ swiper-slide img {
 }
 
 .naslovDVG .statistikaBrojke .broj {
-    margin-top: -100px;
     font-family: Inter;
     font-size: 46px;
     font-weight: 900;
@@ -904,8 +965,7 @@ swiper-slide img {
     letter-spacing: 0em;
     text-align: center;
     color: #fff;
-    /*da smanjim prostor izmmedju  brojeva i teksta ispod*/
-    margin-top: -20px;
+    
 }
 
 
@@ -1222,6 +1282,7 @@ swiper-slide img {
     height: 3px;
     left: 457.5px;
     margin-top: 10%;
+    width: 100%;
 
 }
 
@@ -1425,8 +1486,9 @@ footer .treciDivSadrzaj ul li {
 
 footer .cetvrtiDivPracenje {
     color: #F4F4F4;
-    padding-left: 15px;
-    padding-right: 100px;
+    /*padding-left: 15px;
+    padding-right: 100px;*/
+    padding: 0 100px 0 15px;
 
 }
 
