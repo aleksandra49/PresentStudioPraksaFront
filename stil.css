@@ -456,8 +456,8 @@ header .div1 .burger,
     }
 
     footer .cetvrtiDivPracenje {
-       /* padding-top: 35px;*/
-        padding: 0 0 0 0 ;
+       padding-top: 35px;
+        
        
     }
 
@@ -467,9 +467,7 @@ header .div1 .burger,
 
     footer .footerDole {
         flex-direction: column;
-        text-align: center;
-        
-        
+        text-align: center; 
     }
 
     footer .footerDole .copyText {
@@ -486,6 +484,28 @@ header .div1 .burger,
     footer .footerDole .powered {
         margin-right: 0px;
     }
+}
+
+@media only screen and (max-width:1100px) {
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    footer .cetvrtiDivPracenje {
+        padding-right: 0;
+    }
+
+
+}
+
+@media only screen and (max-width:640px) {
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+
 }
 
 
@@ -1488,7 +1508,7 @@ footer .cetvrtiDivPracenje {
     color: #F4F4F4;
     /*padding-left: 15px;
     padding-right: 100px;*/
-    padding: 0 100px 0 15px;
+    
 
 }
 
@@ -1498,9 +1518,8 @@ footer .cetvrtiDivPracenje {
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0px;
-    text-align: center;
-
-    width: 71px;
+    padding-left: 15px;
+    /*width: 71px;*/
     height: 26px;
     /*background: #FFFFFF;*/
 
@@ -1509,6 +1528,7 @@ footer .cetvrtiDivPracenje {
 .cetvrtiDivPracenje .drustveneMrezeIkone {
     letter-spacing: 6px;
     padding-top: 10px;
+    padding-left: 15px;
 }
 
 
@@ -1520,9 +1540,7 @@ footer .footerDole .copyText {
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.03em;
-    text-align: center;
 
-    margin-left: 40px;
 
 }
 
@@ -1532,15 +1550,12 @@ footer .footerDole .privatnost {
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.03em;
-    text-align: right;
 
-    width: 125px;
     height: 19px;
     top: 339px;
     left: 685px;
 
     text-decoration: underline;
-    margin-left: 20px;
 
 
 
@@ -1552,9 +1567,7 @@ footer .footerDole .uslovi {
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.03em;
-    text-align: right;
     text-decoration: underline;
-    margin-right: 175px;
 
 }
 
@@ -1564,10 +1577,8 @@ footer .footerDole .powered {
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.03em;
-    text-align: left;
     text-decoration: none;
     /*da ga priblizim elementu Studio Present*/
-    margin-right: -70px;
 
 }
 
@@ -1577,7 +1588,6 @@ footer .footerDole .studio {
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.03em;
-    text-align: right;
     text-decoration: underline;
     color: #FFFFFF80;
 
