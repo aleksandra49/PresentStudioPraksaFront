@@ -355,7 +355,7 @@ header .div1 .burger,
 }
 
 
-@media only screen and (max-width:730px) {
+@media only screen and (max-width:900px) {
     .header .div1 {
 
         justify-content: flex-start;
@@ -415,6 +415,10 @@ header .div1 .burger,
 
     .header .navbar .nav-links li p {
         display: block;
+    }
+
+    .divPosleSlajdova{
+        flex-direction: column;
     }
 }
 
@@ -496,11 +500,16 @@ swiper-slide img {
 .divPosleSlajdova {
     /*background-color: white;*/
     display: flex;
-    padding: 80px 0;
+    padding: 60px 0;
     /*razmak izmdju slike levo i desno*/
-    gap: 2rem;
+    /*gap: 2rem;*/
     position: relative;
     background: #F4F4F4;
+    width: 100%;
+    height: 100%;
+}
+.slikaLevo {
+    flex: 50%;
 }
 
 .divPosleSlajdova img {
@@ -509,27 +518,30 @@ swiper-slide img {
     top: 915px;*/
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 
 
 .divPosleSlajdova .textDesno {
-    flex: 1;
+   /* flex: 1;
     margin-right: 10rem;
-    margin-left: 20px;
+    margin-left: 20px;*/
+    flex: 50%;
+    padding: 40px;
 }
 
 .divPosleSlajdova .elementiGore .bigText {
-    width: 272px;
+    /*width: 272px;
     height: 50px;
     top: 500px;
-    left: 765px;
+    left: 765px;*/
 
     /*da odvojim od teksta */
-    margin-top: 45px;
+    /*margin-top: 45px;*/
 
     font-family: 'Roboto';
-    font-size: 42px;
+    font-size: 37px;
     font-weight: 700;
     line-height: 34px;
     letter-spacing: 0em;
@@ -545,20 +557,20 @@ swiper-slide img {
     background: #BF0F0F;
     width: 137px;
     height: 6px;
-    top: 1019px;
-    left: 765px;
+    /*top: 1019px;
+    left: 765px;*/
 
     margin-top: 20px;
 }
 
 .divPosleSlajdova .elementiGore .smallText {
-    width: 506px;
+    /*width: 506px;
     height: 68px;
     top: 1052px;
-    left: 765px;
+    left: 765px;*/
 
     font-family: 'Inter';
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 34px;
     letter-spacing: 0em;
@@ -575,7 +587,7 @@ swiper-slide img {
     content: '';
     display: block;
     background: #C4C4C466;
-    width: 524px;
+    width: 100%;
     height: 3px;
     top: 1157px;
     left: 765px;
@@ -584,17 +596,17 @@ swiper-slide img {
 }
 
 .elementiDole {
-    margin-top: 100px;
+    /*margin-top: 100px;*/
 }
 
 
 .divPosleSlajdova .elementiDole p {
     font-family: 'Roboto';
 
-    width: 524px;
+    /*width: 524px;
     height: 237px;
     top: 1214px;
-    left: 765px;
+    left: 765px;*/
 
     font-size: 14px;
     font-weight: 400;
@@ -605,7 +617,8 @@ swiper-slide img {
     /*color: #474747;*/
     color: var(--elementiDole-p-color);
     /*glupi padding za izmejdu teksta i dugmeta #474747;*/
-    margin-bottom: -80px;
+    margin-bottom: 79px;
+    margin-top: 30px;
 }
 
 
@@ -615,8 +628,8 @@ swiper-slide img {
     width: 184px;
     height: 48px;
     /*display: inline-block;*/
-    top: 1374px;
-    left: 765px;
+    /*top: 1374px;
+    left: 765px;*/
     /*da uvecamo test na btn*/
     font-size: medium;
     /*da na za obli dugme*/
