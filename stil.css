@@ -205,10 +205,6 @@ input {
 }
 
 
-/*-------------------DARK MODE END ----------------------------*/
-
-
-
 /*-------------------DIZAJN CELE STRANICE ----------------------------*/
 
 
@@ -628,8 +624,6 @@ swiper-slide img {
 .parallax-content h1::after {
     content: '';
     display: flex;
-
-
     width: 137px;
     height: 6px;
     top: 273px;
@@ -639,6 +633,7 @@ swiper-slide img {
     margin-top: 15px;
     margin-left: 225px;*/
     margin: auto;
+    margin-top: 10px;
     background-color: #BF0F0F;
 }
 
@@ -685,6 +680,40 @@ swiper-slide img {
     position: relative;
 }
 
+/*.triSlike img {
+    position: relative; 
+  
+  .triSlike img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    transition: background-color 0.3s;
+    pointer-events: none; 
+  }
+  
+  .image-container:hover::before {
+    background-color: rgba(255, 0, 0, 0.5); 
+  }
+  */
+
+/*.triSlike .slika::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s; 
+  }
+  
+  .triSlike .slika:hover::before {
+    width: 100%;
+  }*/
+  
+
 
 
 .triSlike p {
@@ -712,34 +741,10 @@ swiper-slide img {
     background-color: #BF0F0F;
 }
 
-/*.triSlike .slika::before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 401px;
-    height: 12px;
-    top: 2330px;
-    left: 935px;
-    margin-bottom: 100px;
-
-
-    background-color: #BF0F0F;
-}*/
-
-/* .triSlike .slika:nth-child(3)::before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%; 
-    height: 100%; 
-    left: 0;
-    background-image: url('./images/Rectangle3.png');
-    background-color: #BF0F0F;  
-} */
 
 
 
-/*NASLOV DVG BROJEK I RED LINE*/
+/*--------------------------NASLOV DVG BROJKE I RED LINE---------------------------------*/
 
 .naslovDVG {
     text-align: center;
@@ -794,9 +799,9 @@ swiper-slide img {
     margin-top: 20px;
 }
 
+
+
 /*STATISTIKA*/
-
-
 
 .naslovDVG .statistikaBrojke {
     background-image: url('./images/zaStatistikuBackground.png');
@@ -809,6 +814,7 @@ swiper-slide img {
     width: 100%;
 }
 
+
 .naslovDVG .statistikaBrojke ul {
     display: flex;
     list-style-type: none;
@@ -816,7 +822,25 @@ swiper-slide img {
     white-space: pre-wrap;
     /*izmedju elementa pravi razmak*/
     letter-spacing: 7px;
+
 }
+
+/*.naslovDVG .statistikaBrojke ul li:not(:last-child){
+    
+    border-right: 0.5px solid #C4C4C466;
+    padding-right: 10px;
+}*/
+
+.statistikaBrojke ul li {
+    border-right: 0.5px solid #C4C4C466;
+    padding: 10px ; 
+    padding-right: 10px;
+  }
+  
+
+  .statistikaBrojke ul li:last-child {
+    border-right: none;
+  }
 
 .naslovDVG .statistikaBrojke .broj {
     font-family: Inter;
@@ -897,9 +921,6 @@ swiper-slide img {
     width: 100%;
     height: 3px;
     margin-bottom: 50px;
-    
-    
-   
 }
 
 
@@ -1626,6 +1647,7 @@ footer .footerDole .studio {
         /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
         /*top: 10%;*/
         font-size: 30px;
+        
     }
 
     .header .div1 {
@@ -1700,6 +1722,10 @@ footer .footerDole .studio {
         flex-direction: column;
     }
 
+    .naslovDVG .statistikaBrojke ul li {
+        border: none;
+    }
+
     .naslovDVG .statistikaBrojke ul {
         flex-direction: column;
     }
@@ -1734,10 +1760,6 @@ footer .footerDole .studio {
        padding-top: 35px;
         
        
-    }
-
-    .drugiDivKontakt .adresa, .email, .telefon {
-        padding-top: 15px;
     }
 
     footer .footerDole {
