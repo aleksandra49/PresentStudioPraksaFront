@@ -359,186 +359,6 @@ header .div1 .burger,
 }
 
 
-@media only screen and (max-width:900px) {
-
-
-    .popup-container {
-        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
-        top: 40%;
-        left: 60%;
-        transform: translate(-60%, -40%);
-        width: 50%;
-    }
-    .popup-text {
-        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
-        font-size: 15px;
-    }
-    .popup-textDvg {
-        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
-        /*top: 10%;*/
-        font-size: 20px;
-    }
-
-
-
-    .header .div1 {
-
-        justify-content: flex-start;
-        /*da nam rasiri na celu stranicu*/
-        display: flex;
-        /*da na nam se ne bi lepili uz ivice ekrana*/
-        padding: 0 10%;
-
-    }
-
-
-
-    .header .navbar .nav-links {
-        display: none;
-    }
-
-    .switch{
-        margin-left: auto;
-     }
-
-    .header .div1 .burger {
-        margin-left: 15px;
-        display: block;
-    }
-
-    .header .div1 .close-icon {
-        margin-left: 30px;
-        display: none;
-    }
-
-    .header .div1 .jezici {
-        display: none;
-    }
-
-    .header .div1 .jezici.show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header .navbar .nav-links.show {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 0px;
-        /*background-color: #ffffff;*/
-        align-items: center;
-    }
-
-    .header .navbar .nav-links li {
-        display: flex;
-    }
-
-    .header .navbar .nav-links li h3 {
-        display: block;
-        font-size: 10px;
-    }
-
-    .header .navbar .nav-links li p {
-        display: block;
-    }
-
-    .divPosleSlajdova{
-        flex-direction: column;
-    }
-
-    .brendoviSlike {
-        flex-direction: column;
-        margin-top: 20%;
-    }
-
-    .triSlike {
-        flex-direction: column;
-    }
-
-    .naslovDVG .statistikaBrojke ul {
-        flex-direction: column;
-    }
-
-    .tekstIProizvodi{
-        /*display: none;*/
-        
-    }
-
-    .footerGore {
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    footer .drugiDivKontakt::before,
-    footer .treciDivSadrzaj::before,
-    footer .cetvrtiDivPracenje::before {
-        display: none;
-    }
-
-    footer .drugiDivKontakt .naslov {
-        padding-top: 35px;
-    }
-
-    footer .treciDivSadrzaj {
-        padding-top: 35px;
-
-    }
-
-    footer .cetvrtiDivPracenje {
-       padding-top: 35px;
-        
-       
-    }
-
-    .drugiDivKontakt .adresa, .email, .telefon {
-        padding-top: 15px;
-    }
-
-    footer .footerDole {
-        flex-direction: column;
-        text-align: center; 
-    }
-
-    footer .footerDole .copyText {
-        margin-left: 0;
-    }
-    footer .footerDole .privatnost {
-        text-align: center;
-    }
-
-    footer .footerDole .studio {
-        text-align: center;
-        
-    }
-    footer .footerDole .powered {
-        margin-right: 0px;
-    }
-}
-
-@media only screen and (max-width:1100px) {
-    .brendoviSlike {
-        flex-direction: column;
-        margin-top: 20%;
-    }
-
-    footer .cetvrtiDivPracenje {
-        padding-right: 0;
-    }
-
-
-}
-
-@media only screen and (max-width:640px) {
-    .brendoviSlike {
-        flex-direction: column;
-        margin-top: 20%;
-    }
-
-
-}
-
-
 /*Prikaz slika kada kliknemo*/
 /*swiper/slideshow za slike*/
 
@@ -815,9 +635,10 @@ swiper-slide img {
     top: 273px;
     left: 652px;
     right: 50px;
-    align-items: center;
+    /*align-items: center;
     margin-top: 15px;
-    margin-left: 225px;
+    margin-left: 225px;*/
+    margin: auto;
     background-color: #BF0F0F;
 }
 
@@ -1106,7 +927,7 @@ swiper-slide img {
     /*da koliko ce se prikazati u jednom slajdu slika*/
     width: 52%;
     margin-top: 50px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 .slider-wrapper {
@@ -1116,7 +937,7 @@ swiper-slide img {
 
 .slider-wrapper .slide-button {
     position: absolute;
-    top: 50%;
+    top: 40%;
     outline: none;
     border: none;
     height: 40px;
@@ -1149,10 +970,10 @@ swiper-slide img {
 
 /*SLIKE*/
 .slider-wrapper .image-list {
-    height: 325px;
+    /*height: 325px;*/
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 15px;
+    /*gap: 15px;*/
     font-size: 0;
     list-style: none;
     /* kolok da bude odaljena linija da bi slatao*/
@@ -1372,7 +1193,7 @@ swiper-slide img {
     margin-top: 11%;
     top: 4146px;
     left: 190px;
-    gap: 74px;
+    gap: 60px;
 
 }
 
@@ -1684,7 +1505,7 @@ footer .footerDole .studio {
         flex-direction: column;
     }
     .divPosleSlajdova .elementiDole .btnOnama {
-        max-width: 30%;
+        max-width: 50%;
         font-size: 12px;
         height: auto;
     }
@@ -1780,6 +1601,170 @@ footer .footerDole .studio {
     }
     footer .footerDole .powered {
         margin-right: 0px;
+    }
+    
+}
+
+
+/*-----------------------RESPONSIVE TABLET------------------*/
+
+@media only screen and (max-width:900px) {
+
+
+    .popup-container {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        top: 40%;
+        left: 60%;
+        transform: translate(-60%, -40%);
+        width: 70%;
+    }
+    .popup-text {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        font-size: 20px;
+    }
+    .popup-textDvg {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        /*top: 10%;*/
+        font-size: 30px;
+    }
+
+    .header .div1 {
+
+        justify-content: flex-start;
+        /*da nam rasiri na celu stranicu*/
+        display: flex;
+        /*da na nam se ne bi lepili uz ivice ekrana*/
+        padding: 0 10%;
+    }
+
+    .header .navbar .nav-links {
+        display: none;
+    }
+
+    .switch{
+        margin-left: auto;
+     }
+
+    .header .div1 .burger {
+        margin-left: 15px;
+        display: block;
+    }
+
+    .header .div1 .close-icon {
+        margin-left: 30px;
+        display: none;
+    }
+
+    .header .div1 .jezici {
+        display: none;
+    }
+
+    .header .div1 .jezici.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .navbar .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 0px;
+        /*background-color: #ffffff;*/
+        align-items: center;
+    }
+
+    .header .navbar .nav-links li {
+        display: flex;
+    }
+
+    .header .navbar .nav-links li h3 {
+        display: block;
+        font-size: 10px;
+    }
+
+    .header .navbar .nav-links li p {
+        display: block;
+    }
+
+    .divPosleSlajdova{
+        flex-direction: column;
+    }
+
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 20%;
+        gap: 1px;
+    }
+
+    .triSlike {
+        flex-direction: column;
+    }
+
+    .naslovDVG .statistikaBrojke ul {
+        flex-direction: column;
+    }
+
+    .tekstIProizvodi{
+        /*display: none;*/
+        
+    }
+
+    .footerGore {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    footer .drugiDivKontakt::before,
+    footer .treciDivSadrzaj::before,
+    footer .cetvrtiDivPracenje::before {
+        display: none;
+    }
+
+    footer .drugiDivKontakt .naslov {
+        padding-top: 35px;
+    }
+
+    footer .treciDivSadrzaj {
+        padding-top: 35px;
+
+    }
+
+    footer .cetvrtiDivPracenje {
+       padding-top: 35px;
+        
+       
+    }
+
+    .drugiDivKontakt .adresa, .email, .telefon {
+        padding-top: 15px;
+    }
+
+    footer .footerDole {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    footer .footerDole .copyText {
+        margin-left: 0;
+    }
+    footer .footerDole .privatnost {
+        text-align: center;
+    }
+
+    footer .footerDole .studio {
+        text-align: center;
+        
+    }
+    footer .footerDole .powered {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .brendoviSlike {
+        flex-direction: column;
     }
     
 }
