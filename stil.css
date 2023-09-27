@@ -375,7 +375,7 @@ header .div1 .burger,
     }
     .popup-textDvg {
         /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
-        top: 10%;
+        /*top: 10%;*/
         font-size: 20px;
     }
 
@@ -1646,4 +1646,140 @@ footer .footerDole .studio {
     color: #FFFFFF80;
 
 
+}
+
+
+/*---------------------RESPONSIVE MOBILNI--------------------*/
+
+@media only screen and (max-width: 600px) {
+
+    .popup-container {
+        top: 20%;
+        left: 60%;
+        transform: translate(-60%, -40%);
+        width: 70%;
+    }
+    .popup-text {
+        font-size: 12px;
+    }
+    .popup-textDvg {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 70%;
+    }
+
+    .header .div1 .jezici ul li a {
+        font-size: 10px;
+    }
+    .divPosleSlajdova .elementiGore .smallText {
+        font-size: 17px;
+    }
+    .divPosleSlajdova .elementiGore .bigText {
+        font-size: 25px;
+    }
+    
+    .divPosleSlajdova{
+        flex-direction: column;
+    }
+    .divPosleSlajdova .elementiDole .btnOnama {
+        max-width: 30%;
+        font-size: 12px;
+        height: auto;
+    }
+
+    .parallax-content h1 {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .parallax-content h1::after {
+        margin: auto;
+    }
+
+    .triSlike {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .triSlike p {
+        font-size: 12px;
+    }
+
+    .naslovDVG .dvg {
+        padding-top: 40px;
+        font-size: 30px;
+    }
+    
+    .naslovDVG .statistikaBrojke .broj {
+        font-size: 30px;
+    }
+
+    .naslovDVG .statistikaBrojke ul {
+        flex-direction: column;
+    }
+
+    .tekstiznadBrendova {
+        font-size: 20px;
+    }
+    .zadnjiDivSaBrendovima .btn {
+        width: 30%;
+        height: auto;
+    }
+    .zadnjiDivSaBrendovima .btn p {
+        font-size: 13px;
+        padding: 3px;
+    }
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    footer .drugiDivKontakt::before,
+    footer .treciDivSadrzaj::before,
+    footer .cetvrtiDivPracenje::before {
+        display: none;
+    }
+
+    footer .drugiDivKontakt .naslov {
+        padding-top: 35px;
+    }
+    .drugiDivKontakt .adresa, .email, .telefon {
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .footerGore {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .treciDivSadrzaj {
+        padding-top: 35px;
+    }
+
+    footer .cetvrtiDivPracenje {
+       padding-top: 35px;
+    }
+
+    footer .footerDole {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    footer .footerDole .copyText {
+        margin-left: 0;
+    }
+    footer .footerDole .privatnost {
+        text-align: center;
+    }
+
+    footer .footerDole .studio {
+        text-align: center;
+        
+    }
+    footer .footerDole .powered {
+        margin-right: 0px;
+    }
+    
 }
