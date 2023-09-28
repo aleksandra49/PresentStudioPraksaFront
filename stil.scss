@@ -1,0 +1,1781 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: "Times New Roman", sans-serif;*/
+}
+
+body {
+    max-width: 100%;
+    /*height: 2000px;*/
+    height: 100%;
+    /*koristim je za parallax*/
+    background-image: url('../../images/distribucijaParallax.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-clip: content-box;*/
+}
+
+/*---------------------POPUP -------------------*/
+ /* Stil za popup kontejner */
+ .popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /*da mi centrira iznad celog dizajna jer se pre nalazio ispod u paraplaxu*/
+    text-align: center;
+}
+
+/* Stil za sliku u popupu */
+.popup-image {
+    filter: brightness(50%);
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Stil za zatvaranje popupa */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    z-index: 2; 
+}
+
+/* Stil za tekst u popupu */
+.popup-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    width: 70%; 
+    text-shadow: 2px 2px black;
+    
+}
+
+/* Stil za tekst u gornjem levom uglu */
+.popup-textDvg {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 34px;
+    text-shadow: 2px 2px black;
+}
+
+
+/*---------------------POPUP -------------------------------*/
+
+
+
+/*-------------------DARK MODE ----------------------------*/
+/*ovde je koja je prvobitna boja elemenata bila*/
+:root {
+    --header-background-color: white;
+    --header-div1-background-color: #D9D9D9;
+    --header-div1-jezici-ul-li-a-color: #595959;
+    --header-navbar-ul-brend-color: #888787;
+    --bigText-color: #303030;
+    --smallText-color: #474747;
+    --elementiDole-p-color: #474747;
+    --triSlike-background-color: white;
+    --triSlike-p-color: black;
+    --naslovDVG-background-color: white;
+    --naslovDVG-dvg-color: #303030;
+    --naslovDVG-brojke-color: #474747;
+    --tekstIProizvodi-background-color: #F4F4F4;
+    --tekstIProizvodi-color: black;
+    --zadnjiDivSaBrendovima-background-color: #fff;
+    --tekstiznadBrendova-color: #474747;
+    --footerDole-color: gray;
+    --textNasiProizvodi-color: #474747;
+    --textOkvalitetu-color: #474747;
+}
+
+
+/*menjanje u dark mode*/
+.dark-mode {
+    /*color: white;*/
+    --header-background-color: #444141;
+    --header-div1-background-color: #A6A1A1;
+    --header-div1-jezici-ul-li-a-color: white;
+    --header-navbar-ul-brend-color: white;
+    --header-navbar-ul-li-color: white;
+    --bigText-color: white;
+    --smallText-color: white;
+    --elementiDole-p-color: white;
+    --triSlike-background-color: #A6A1A1;
+    --triSlike-p-color: white;
+    --naslovDVG-background-color: #A6A1A1;
+    --naslovDVG-dvg-color: white;
+    --naslovDVG-brojke-color: white;
+    --tekstIProizvodi-background-color: #A6A1A1;
+    --tekstIProizvodi-color: white;
+    --zadnjiDivSaBrendovima-background-color: #A6A1A1;
+    --tekstiznadBrendova-color: white;
+    --footerDole-color: white;
+    --textNasiProizvodi-color: white;
+    --textOkvalitetu-color: white;
+}
+
+
+/*ovde da olaksam menjanej u dark mode da ne moram da menjam u original kodu, kako za koji element*/
+.dark-mode .header .div1 .jezici ul li .active {
+    color: white;
+    /* Bela boja teksta u dark modu */
+}
+
+.dark-mode .brend p {
+    color: white;
+}
+
+.dark-mode .divPosleSlajdova {
+    background-color: #A6A1A1;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/*.dark-mode img {
+    filter: brightness(70%); 
+}*/
+
+/* Stilovi za prekidač */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: auto;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    /* Dodajte zaobljenost za prekidač */
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    /* Dodajte zaobljenost za dugme prekidača */
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #444141;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #444141;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Skrijte stvarni input */
+input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/*-------------------DIZAJN CELE STRANICE ----------------------------*/
+
+
+/*stil za header- jezike, logo i meni*/
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*background: white;*/
+    /*varijabla za moj darkmode*/
+    background-color: var(--header-background-color);
+}
+
+.header .div1 {
+    /*boja gde nam se nalazi nas logo*/
+    /*bila pre boja dok nisam dodala darmode*/
+    /*background-color: #D9D9D9;*/
+    background-color: var(--header-div1-background-color);
+    justify-content: space-between;
+    /*da mi centrira sve element na sredinu headera*/
+    align-items: center;
+    /*da nam rasiri na celu stranicu*/
+    display: flex;
+    height: 75px;
+    /*ako stavim 1440px onda se ekran mora pomerti*/
+    width: 100%;
+    /*da na nam se ne bi lepili uz ivice ekrana*/
+    padding: 0 5%;
+
+}
+
+.header .logo {
+    height: 44.08px;
+    width: 218.86px;
+    top: 17px;
+    left: 105px;
+}
+
+.header .div1 .jezici ul li {
+    /*da  ne bude jedno ispod drugog vec lepo da bude jedan pored drugog*/
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header .div1 .jezici ul li a {
+    /*text-decoration: none;*/
+    font-family: 'Roboto';
+    /*bila boja dok nije dosao dark mode*/
+    /*color: #595959;*/
+    color: var(--header-div1-jezici-ul-li-a-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.header .div1 .jezici ul li .active {
+    text-decoration: none;
+    color: #888787;
+    font-weight: 400;
+    /* width: 47px
+    height: 18px
+    top: 31px
+    left: 1288.64px*/
+}
+
+
+/*meni*/
+
+.header .navbar {
+    display: contents;
+    /*njihovo mi smeta kada stavim nece lepo na sredinu*/
+    /*width: 1100px;
+    height: 64px;
+    top: 75px;
+    left: 122px;*/
+    /*da mi lepo ispise sve u redovima kako teba a ne da sece redove*/
+    white-space: nowrap;
+    width: 100%;
+}
+
+.header .navbar ul {
+
+    display: flex;
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+    /*align-items: center;*/
+}
+
+
+.header .navbar ul li {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    list-style-type: none;
+    text-align: center;
+    border: 0.5px solid #88878766;
+    /*padding: 0.8rem;*/
+    height: 62px;
+    color: var(--header-navbar-ul-li-color);
+}
+
+/*za font od menija za velika slova */
+.header .navbar ul li h4 {
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+/*za font od menija  za mala slova ispod velikih*/
+.header .navbar ul li p {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/*za brend za je dr boje jer je kliknuto an to*/
+.header .navbar ul .brend {
+    /*color: #888787;*/
+    color: var(--header-navbar-ul-brend-color);
+}
+
+/*lijija ispod menija*/
+
+.header .levoLinija {
+    width: 1348px;
+    top: 137px;
+    left: 646px;
+    border: 1px;
+    /*angle: -0 deg;*/
+}
+
+/*da mi se ne prikazuju ikone od burger menija*/
+header .div1 .burger,
+.close-icon {
+    display: none;
+}
+
+
+/*Prikaz slika kada kliknemo*/
+/*swiper/slideshow za slike*/
+
+.swiperBody {
+    position: relative;
+    background: white;
+    width: 100%;
+}
+
+.swiperBody {
+
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper {
+    background: white;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    color: white;
+}
+
+/*prosli kod za sliku sa tackicom*/
+
+.slideshow-container {
+
+    max-width: auto;
+    position: relative;
+    margin: auto;
+    background-color: #fff;
+}
+
+.slideshow-container .strelica {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    top: 555px;
+    left: 640px;
+}
+
+.slideshow-container .strelica:hover {
+    cursor: pointer;
+}
+
+
+
+/*slika  naslov tekst dugme*/
+
+.divPosleSlajdova {
+    /*background-color: white;*/
+    display: flex;
+    padding: 60px 0;
+    /*razmak izmdju slike levo i desno*/
+    /*gap: 2rem;*/
+    position: relative;
+    background: #F4F4F4;
+    width: 100%;
+    height: 100%;
+}
+.slikaLevo {
+    flex: 50%;
+}
+
+.divPosleSlajdova img {
+    /*width: 710px;
+    height: 504px;
+    top: 915px;*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.divPosleSlajdova .textDesno {
+   /* flex: 1;
+    margin-right: 10rem;
+    margin-left: 20px;*/
+    flex: 50%;
+    padding: 40px;
+}
+
+.divPosleSlajdova .elementiGore .bigText {
+    /*width: 272px;
+    height: 50px;
+    top: 500px;
+    left: 765px;*/
+
+    /*da odvojim od teksta */
+    /*margin-top: 45px;*/
+
+    font-family: 'Roboto';
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    /*color: #303030;*/
+    color: var(--bigText-color);
+}
+
+.divPosleSlajdova .elementiGore .bigText::after {
+    content: '';
+    display: block;
+    background: #BF0F0F;
+    width: 137px;
+    height: 6px;
+    /*top: 1019px;
+    left: 765px;*/
+
+    margin-top: 20px;
+}
+
+.divPosleSlajdova .elementiGore .smallText {
+    /*width: 506px;
+    height: 68px;
+    top: 1052px;
+    left: 765px;*/
+
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    /*color: #474747;*/
+    color: var(--smallText-color);
+
+    /*da odvojim od crvene linije*/
+    margin-top: 40px;
+}
+
+.divPosleSlajdova .elementiGore .smallText::after {
+    content: '';
+    display: block;
+    background: #C4C4C466;
+    width: 100%;
+    height: 3px;
+    top: 1157px;
+    left: 765px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+}
+
+.divPosleSlajdova .elementiDole p {
+    font-family: 'Roboto';
+
+    /*width: 524px;
+    height: 237px;
+    top: 1214px;
+    left: 765px;*/
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    /*color: #474747;*/
+    color: var(--elementiDole-p-color);
+    /*glupi padding za izmejdu teksta i dugmeta #474747;*/
+    margin-bottom: 79px;
+    margin-top: 30px;
+}
+
+
+
+.divPosleSlajdova .elementiDole .btnOnama {
+
+    max-width: 184px;
+    height: 48px;
+    /*display: inline-block;*/
+    /*top: 1374px;
+    left: 765px;*/
+    /*da uvecamo test na btn*/
+    font-size: medium;
+    /*da na za obli dugme*/
+    border-radius: 4px;
+    gap: 8px;
+    padding: 10px;
+
+    background: #BF0F0F;
+    color: #fff;
+    /*da skine crni okvir sa dugmeta*/
+    border: 0;
+}
+
+/*pre nego sto sam implementirala parapllax ovakav je kod bio samo prikaz slike*/
+
+/*main .parapllax .distribucijaSLika {
+    width: 1348px;
+    height: 502px;
+    top: 1488px;
+    padding: 0px, 422px, 0px, 422px;
+
+    background: #31384078;
+
+
+}*/
+
+/* Parallax - slika je body divovi beli */
+.parallax-container {
+    position: relative;
+    height: 350px;
+    /* Podesite visinu prema vašim potrebama */
+    overflow: hidden;
+    text-align: center;
+}
+
+.parallax-image {
+    width: 100%;
+    height: 500px;
+}
+
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.parallax-content h1 {
+    font-size: 32px;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.325em;
+    margin-top: 60px;
+}
+
+.parallax-content h1::after {
+    content: '';
+    display: flex;
+    width: 137px;
+    height: 6px;
+    top: 273px;
+    left: 652px;
+    right: 50px;
+    /*align-items: center;
+    margin-top: 15px;
+    margin-left: 225px;*/
+    margin: auto;
+    margin-top: 10px;
+    background-color: #BF0F0F;
+}
+
+.parallax-content p {
+    font-size: 18px;
+}
+
+/*main .parapllax .distribucijaLinija:hover {
+    width: 137px;
+    height: 6px;
+    top: 273px;
+    left: 652px;
+
+    position: relative;
+
+}*/
+
+/*TRI SLIKE PROIZVODA*/
+
+.triSlike {
+    margin-top: 55px;
+    /*margin-left: 30px;*/
+    /*margin-right: 30px;*/
+    gap: 25px;
+    display: flex;
+    /*da prebaci elemente  sl red ako ne staju u red*/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /*background-color: white;*/
+    background-color: var(--triSlike-background-color);
+    padding-bottom: 130px;
+}
+
+.triSlike .slika {
+
+    /*If you want an image to scale down if it has to, 
+    but never scale up to be larger than its original size,*/
+    max-width: 100%;
+    /*width: auto;*/
+    height: auto;
+    background: white;
+    margin-top: 65px;
+    position: relative;
+}
+
+/*.triSlike img {
+    position: relative; 
+  
+  .triSlike img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    transition: background-color 0.3s;
+    pointer-events: none; 
+  }
+  
+  .image-container:hover::before {
+    background-color: rgba(255, 0, 0, 0.5); 
+  }
+  */
+
+/*.triSlike .slika::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s; 
+  }
+  
+  .triSlike .slika:hover::before {
+    width: 100%;
+  }*/
+  
+
+
+
+.triSlike p {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: var(--triSlike-p-color);
+}
+
+.triSlike p::after {
+
+    content: '';
+    display: block;
+
+    width: 50px;
+    height: 2px;
+    top: 2401px;
+    left: 104px;
+    margin-top: 10px;
+    background-color: #BF0F0F;
+}
+
+
+
+
+/*--------------------------NASLOV DVG BROJKE I RED LINE---------------------------------*/
+
+.naslovDVG {
+    text-align: center;
+    /*margin-top: 150px;*/
+    justify-content: center;
+    align-items: center;
+
+    /*background-color: #fff;*/
+    background-color: var(--naslovDVG-background-color);
+}
+
+.naslovDVG .dvg {
+
+    margin-bottom: 13px;
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    /*color: #303030;*/
+    color: var(--naslovDVG-dvg-color);
+}
+
+.naslovDVG .brojke {
+
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    /*color: #474747;*/
+    color: var(--naslovDVG-brojke-color);
+    margin-bottom: 70px;
+}
+
+.naslovDVG .brojke::after {
+    content: '';
+    display: block;
+    background: #BF0F0F;
+
+    width: 137px;
+    height: 6px;
+    top: 2668px;
+    left: 650px;
+    /*margin-left: 605px;
+    margin-top: 20px;*/
+    margin:auto;
+    margin-top: 20px;
+}
+
+
+
+/*STATISTIKA*/
+
+.naslovDVG .statistikaBrojke {
+    background-image: url('../../images/zaStatistikuBackground.png');
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+.naslovDVG .statistikaBrojke ul {
+    display: flex;
+    list-style-type: none;
+    text-align: justify;
+    white-space: pre-wrap;
+    /*izmedju elementa pravi razmak*/
+    letter-spacing: 7px;
+
+}
+
+/*.naslovDVG .statistikaBrojke ul li:not(:last-child){
+    
+    border-right: 0.5px solid #C4C4C466;
+    padding-right: 10px;
+}*/
+
+.statistikaBrojke ul li {
+    border-right: 0.5px solid #C4C4C466;
+    padding: 10px ; 
+    padding-right: 10px;
+  }
+  
+
+  .statistikaBrojke ul li:last-child {
+    border-right: none;
+  }
+
+.naslovDVG .statistikaBrojke .broj {
+    font-family: Inter;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #fff;
+}
+
+.naslovDVG .statistikaBrojke p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    
+}
+
+
+
+/*NASLOV PROIZVODA I SLIKE PROIZVODA I TEKST */
+
+.tekstIProizvodi {
+    /*background: #F4F4F4;*/
+    background-color: var(--tekstIProizvodi-background-color);
+    color: var(--tekstIProizvodi-color);
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    /*margin-top: 70px;*/
+    padding: 40px;
+    /*ovde sam stavila onaj logo sa leve strane kod slika proizvoda*/
+
+    background-image: url('../../images/logoKodProizvoda.png');
+    background-size: auto;
+    /* Očuvaće prirodnu veličinu slike */
+    background-position: left bottom;
+    /* Postavlja poziciju slike u levom donjem uglu */
+    /*background-position: left calc(100%  - 120px); /* Pomeranje slike 10 piksela od dna */
+    background-repeat: no-repeat;
+    
+    
+}
+
+/*.logoKodProizvoda {
+    margin-right: auto;
+    margin-bottom: auto;
+    background-size: auto;
+    background-position: left bottom;
+    margin-top: auto;
+    width: 100%;
+}*/
+
+.tekstIProizvodi .textNasiProizvodi {
+    text-align: center;
+    margin-top: 70px;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--textNasiProizvodi-color);
+    
+}
+
+.tekstIProizvodi .textOkvalitetu::before {
+    content: '';
+    display: block;
+    background: #C4C4C466;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 50px;
+}
+
+
+
+.tekstIProizvodi .textOkvalitetu {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    /*ovde sam rekla da tekst moze smao na toliko da se rasiri */
+    /*width: 524px;*/
+    max-width: 500px;
+    height: 67px;
+    margin-bottom: 45px;
+    color: var(--textOkvalitetu-color);
+}
+
+/*SLIDER ZA SLIKE PROIZVODA*/
+
+.container {
+    /*velicina slajda*/
+    max-width: 1000px;
+    /*da koliko ce se prikazati u jednom slajdu slika*/
+    width: 52%;
+    margin-top: 50px;
+    /*margin-left: 10px;*/
+}
+
+.slider-wrapper {
+    position: relative;
+
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 40%;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: grey;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+
+/*SLIKE*/
+.slider-wrapper .image-list {
+    /*height: 325px;*/
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /*gap: 15px;*/
+    font-size: 0;
+    list-style: none;
+    /* kolok da bude odaljena linija da bi slatao*/
+    margin-bottom: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    /*content: "";*/
+    /*width: 52.73px;*/
+    /*height: 2px;*/
+    /*top: 304px;*/
+    /*left: 524.47px;*/
+    /*background: #BF0F0F;
+    display: block;
+    justify-content: right;*/
+    position: relative;
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/*za after i linije da se pokaze*/
+.tekst-kartice::after {
+    content: '';
+    display: block;
+
+    width: 52.73px;
+    height: 2px;
+    top: 500px;
+    left: 524.47px;
+    margin-top: 10px;
+    background-color: #BF0F0F;
+}
+
+.tekst-kartice {
+
+    position: absolute;
+    top: 40%;
+    /* Postavlja tekst na sredinu slike po vertikali */
+    left: 50%;
+    /* Postavlja tekst na sredinu slike po horizontali */
+    transform: translate(-55%, 260%);
+    /* Centrira tekst u odnosu na sredinu slike */
+    color: #474747;
+
+    /*padding: - 15px;*/
+    width: 75%;
+    /* Prilagodite širinu teksta prema potrebama */
+    text-align: center;
+
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/*za after i linije da se pokaze*/
+.tekst-karticeDuze::after {
+    content: '';
+    display: block;
+
+    width: 52.73px;
+    height: 2px;
+    top: 500px;
+    left: 524.47px;
+
+    margin-top: 10px;
+    margin-bottom: -10px;
+    background-color: #BF0F0F;
+}
+
+.tekst-karticeDuze {
+
+    position: absolute;
+    top: 30%;
+    /* Postavlja tekst na sredinu slike po vertikali */
+    left: 40%;
+    /* Postavlja tekst na sredinu slike po horizontali */
+    transform: translate(-55%, 260%);
+    /* Centrira tekst u odnosu na sredinu slike */
+    color: #474747;
+
+    /*padding: - 15px;*/
+    width: 60%;
+    /* Prilagodite širinu teksta prema potrebama */
+    text-align: center;
+
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+
+
+/*SLIDER*/
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+
+.tekstIProizvodi .logoKodProizvoda {
+    align-content: left;
+}
+
+/*BRENDOVI i slike sa dugmetom*/
+
+.zadnjiDivSaBrendovima {
+    /*margin-top: 80px;*/
+    display: flex;
+    /*background-color: #fff;*/
+    background-color: var(--zadnjiDivSaBrendovima-background-color);
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tekstiznadBrendova {
+
+    padding-top: 70px;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    max-width: 506px;
+
+    height: 68px;
+    top: 3994px;
+    left: 466px;
+    /*color: #474747;*/
+    color: var(--tekstiznadBrendova-color);
+
+}
+
+.tekstiznadBrendova::after {
+    /*da naprvaimo nasu sivu liniju*/
+
+    content: "";
+    display: block;
+
+    background: #C4C4C466;
+
+    align-items: center;
+    width: 524px;
+    height: 3px;
+    left: 457.5px;
+    margin-top: 10%;
+    width: 100%;
+
+}
+
+/*izgled slika brendova*/
+.brendoviSlike {
+
+    display: flex;
+    align-items: center;
+
+    width: Hug (1, 060px);
+    height: Hug (161px);
+
+    margin-top: 11%;
+    top: 4146px;
+    left: 190px;
+    gap: 60px;
+
+}
+
+.brend {
+    width: 100%;
+}
+
+.brend p {
+    /*nece da stoji lepo kada dodam width i height*/
+    /* width: 44px;*/
+    /*height: 34px;*/
+
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #474747;
+}
+
+
+.btn {
+    margin-top: 6%;
+
+    width: Hug (255px);
+    height: 50px;
+    top: 4382px;
+    left: 590px;
+    padding: 0px 16px 0px 16px;
+    border-radius: 4px;
+    gap: 8px;
+    background: #BF0F0F;
+    border: 2px;
+    align-items: center;
+    margin-bottom: 8%;
+
+}
+
+.btn p {
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+
+}
+
+/*footer*/
+
+/*nije klasa pa ne mora da se poziva sa . jer je konkretan element*/
+footer {
+    /*za odvavanje od dugmeta*/
+    /*margin-top: 2rem;*/
+    display: flex;
+    background-image: url("../../images/footerSLika.png");
+    background-size: cover;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+
+}
+
+footer .footerGore {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+footer .footerDole {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    bottom: 0;
+    /*color: gray;*/
+    color: var(--footerDole-color);
+    background-color: rgba(0, 0, 0, 0.33);
+    /*text-decoration: underline;*/
+}
+
+footer .footerGore .prviDivlogo {
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+footer .drugiDivKontakt,
+footer .treciDivSadrzaj,
+footer .cetvrtiDivPracenje {
+    position: relative;
+    /* Postavljanje relativnog položaja za ove elemente */
+}
+
+footer .drugiDivKontakt::before,
+footer .treciDivSadrzaj::before,
+footer .cetvrtiDivPracenje::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    /* Širina sive linije */
+    background: rgba(255, 255, 255, 0.25);
+    /* Boja sive linije */
+    border: 1px;
+}
+
+
+footer .drugiDivKontakt {
+    color: #F4F4F4;
+    padding-left: 40px;
+    align-items: center;
+}
+
+footer .drugiDivKontakt .naslov {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.drugiDivKontakt .tekst {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.drugiDivKontakt .adresa,
+.email,
+.telefon {
+    display: flex;
+    /*flex-direction: column;*/
+    padding-top: 35px;
+    align-content: center;
+
+}
+
+.divPodaci .tekst {
+    padding-left: 15px;
+}
+
+.email,
+.telefon {
+    text-decoration: underline;
+}
+
+.adresa .tekst {
+    /*word-wrap: break-word;*/
+    /*overflow-wrap: break-word;*/
+    width: 200px !important;
+    height: 20px;
+
+    /*lokacija se uveca*/
+}
+
+footer .treciDivSadrzaj {
+    color: #F4F4F4;
+    /*text-transform: uppercase;*/
+    padding-left: 15px;
+
+}
+
+footer .treciDivSadrzaj ul li {
+    /*ovo nam stoji da bi iskljucilo one tackice koje se stvaraju kada je lista*/
+    list-style-type: none;
+
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    font-weight: 40;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+
+
+footer .cetvrtiDivPracenje {
+    color: #F4F4F4;
+    /*padding-left: 15px;
+    padding-right: 100px;*/
+    
+
+}
+
+.cetvrtiDivPracenje .naslov {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    padding-left: 15px;
+    /*width: 71px;*/
+    height: 26px;
+    /*background: #FFFFFF;*/
+
+}
+
+.cetvrtiDivPracenje .drustveneMrezeIkone {
+    letter-spacing: 6px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+
+footer .footerDole .copyText {
+
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+
+
+}
+
+footer .footerDole .privatnost {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+
+    height: 19px;
+    top: 339px;
+    left: 685px;
+
+    text-decoration: underline;
+
+
+
+}
+
+footer .footerDole .uslovi {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+
+}
+
+footer .footerDole .powered {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    /*da ga priblizim elementu Studio Present*/
+
+}
+
+footer .footerDole .studio {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+    color: #FFFFFF80;
+
+
+}
+
+
+/*---------------------RESPONSIVE MOBILNI--------------------*/
+
+@media only screen and (max-width: 600px) {
+
+    .popup-container {
+        top: 20%;
+        left: 60%;
+        transform: translate(-60%, -40%);
+        width: 70%;
+    }
+    .popup-text {
+        font-size: 12px;
+    }
+    .popup-textDvg {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 70%;
+    }
+
+    .header .div1 .jezici ul li a {
+        font-size: 10px;
+    }
+    .divPosleSlajdova .elementiGore .smallText {
+        font-size: 17px;
+    }
+    .divPosleSlajdova .elementiGore .bigText {
+        font-size: 25px;
+    }
+    
+    .divPosleSlajdova{
+        flex-direction: column;
+    }
+    .divPosleSlajdova .elementiDole .btnOnama {
+        max-width: 50%;
+        font-size: 12px;
+        height: auto;
+    }
+
+    .parallax-content h1 {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .parallax-content h1::after {
+        margin: auto;
+    }
+
+    .triSlike {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .triSlike p {
+        font-size: 12px;
+    }
+
+    .naslovDVG .dvg {
+        padding-top: 40px;
+        font-size: 30px;
+    }
+    
+    .naslovDVG .statistikaBrojke .broj {
+        font-size: 30px;
+    }
+
+    .naslovDVG .statistikaBrojke ul {
+        flex-direction: column;
+    }
+
+    .tekstiznadBrendova {
+        font-size: 20px;
+    }
+    .zadnjiDivSaBrendovima .btn {
+        width: 30%;
+        height: auto;
+    }
+    .zadnjiDivSaBrendovima .btn p {
+        font-size: 13px;
+        padding: 3px;
+    }
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    footer .drugiDivKontakt::before,
+    footer .treciDivSadrzaj::before,
+    footer .cetvrtiDivPracenje::before {
+        display: none;
+    }
+
+    footer .drugiDivKontakt .naslov {
+        padding-top: 35px;
+    }
+    .drugiDivKontakt .adresa, .email, .telefon {
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .footerGore {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .treciDivSadrzaj {
+        padding-top: 35px;
+    }
+
+    footer .cetvrtiDivPracenje {
+       padding-top: 35px;
+    }
+
+    footer .footerDole {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    footer .footerDole .copyText {
+        margin-left: 0;
+    }
+    footer .footerDole .privatnost {
+        text-align: center;
+    }
+
+    footer .footerDole .studio {
+        text-align: center;
+        
+    }
+    footer .footerDole .powered {
+        margin-right: 0px;
+    }
+    
+}
+
+
+/*-----------------------RESPONSIVE TABLET------------------*/
+
+@media only screen and (max-width:900px) {
+
+
+    .popup-container {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        top: 40%;
+        left: 60%;
+        transform: translate(-60%, -40%);
+        width: 70%;
+    }
+    .popup-text {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        font-size: 20px;
+    }
+    .popup-textDvg {
+        /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
+        /*top: 10%;*/
+        font-size: 30px;
+        
+    }
+
+    .header .div1 {
+
+        justify-content: flex-start;
+        /*da nam rasiri na celu stranicu*/
+        display: flex;
+        /*da na nam se ne bi lepili uz ivice ekrana*/
+        padding: 0 10%;
+    }
+
+    .header .navbar .nav-links {
+        display: none;
+    }
+
+    .switch{
+        margin-left: auto;
+     }
+
+    .header .div1 .burger {
+        margin-left: 15px;
+        display: block;
+    }
+
+    .header .div1 .close-icon {
+        margin-left: 30px;
+        display: none;
+    }
+
+    .header .div1 .jezici {
+        display: none;
+    }
+
+    .header .div1 .jezici.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header .navbar .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 0px;
+        /*background-color: #ffffff;*/
+        align-items: center;
+    }
+
+    .header .navbar .nav-links li {
+        display: flex;
+    }
+
+    .header .navbar .nav-links li h3 {
+        display: block;
+        font-size: 10px;
+    }
+
+    .header .navbar .nav-links li p {
+        display: block;
+    }
+
+    .divPosleSlajdova{
+        flex-direction: column;
+    }
+
+    .brendoviSlike {
+        flex-direction: column;
+        margin-top: 20%;
+        gap: 1px;
+    }
+
+    .triSlike {
+        flex-direction: column;
+    }
+
+    .naslovDVG .statistikaBrojke ul li {
+        border: none;
+    }
+
+    .naslovDVG .statistikaBrojke ul {
+        flex-direction: column;
+    }
+
+    .footerGore {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .drugiDivKontakt::before,
+    footer .treciDivSadrzaj::before,
+    footer .cetvrtiDivPracenje::before {
+        display: none;
+    }
+
+    footer .drugiDivKontakt .naslov {
+        padding-top: 35px;
+    }
+
+    footer .treciDivSadrzaj {
+        padding-top: 35px;
+
+    }
+
+    footer .cetvrtiDivPracenje {
+       padding-top: 35px;
+        
+       
+    }
+
+    footer .footerDole {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    footer .footerDole .copyText {
+        margin-left: 0;
+    }
+    footer .footerDole .privatnost {
+        text-align: center;
+    }
+
+    footer .footerDole .studio {
+        text-align: center;
+        
+    }
+    footer .footerDole .powered {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .brendoviSlike {
+        flex-direction: column;
+    }
+    
+}
