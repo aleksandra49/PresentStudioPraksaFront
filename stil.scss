@@ -17,14 +17,15 @@ body {
 }
 
 /*---------------------POPUP -------------------*/
- /* Stil za popup kontejner */
- .popup-container {
+/* Stil za popup kontejner */
+.popup-container {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999; /*da mi centrira iznad celog dizajna jer se pre nalazio ispod u paraplaxu*/
+    z-index: 9999;
+    /*da mi centrira iznad celog dizajna jer se pre nalazio ispod u paraplaxu*/
     text-align: center;
 }
 
@@ -44,7 +45,7 @@ body {
     cursor: pointer;
     color: white;
     font-size: 20px;
-    z-index: 2; 
+    z-index: 2;
 }
 
 /* Stil za tekst u popupu */
@@ -56,9 +57,9 @@ body {
     color: white;
     text-align: center;
     font-size: 25px;
-    width: 70%; 
+    width: 70%;
     text-shadow: 2px 2px black;
-    
+
 }
 
 /* Stil za tekst u gornjem levom uglu */
@@ -440,6 +441,7 @@ swiper-slide img {
     width: 100%;
     height: 100%;
 }
+
 .slikaLevo {
     flex: 50%;
 }
@@ -456,7 +458,7 @@ swiper-slide img {
 
 
 .divPosleSlajdova .textDesno {
-   /* flex: 1;
+    /* flex: 1;
     margin-right: 10rem;
     margin-left: 20px;*/
     flex: 50%;
@@ -707,7 +709,7 @@ swiper-slide img {
   .triSlike .slika:hover::before {
     width: 100%;
   }*/
-  
+
 
 
 
@@ -790,7 +792,7 @@ swiper-slide img {
     left: 650px;
     /*margin-left: 605px;
     margin-top: 20px;*/
-    margin:auto;
+    margin: auto;
     margin-top: 20px;
 }
 
@@ -828,14 +830,14 @@ swiper-slide img {
 
 .statistikaBrojke ul li {
     border-right: 0.5px solid #C4C4C466;
-    padding: 10px ; 
+    padding: 10px;
     padding-right: 10px;
-  }
-  
+}
 
-  .statistikaBrojke ul li:last-child {
+
+.statistikaBrojke ul li:last-child {
     border-right: none;
-  }
+}
 
 .naslovDVG .statistikaBrojke .broj {
     font-family: Inter;
@@ -856,7 +858,7 @@ swiper-slide img {
     letter-spacing: 0em;
     text-align: center;
     color: #fff;
-    
+
 }
 
 
@@ -882,8 +884,8 @@ swiper-slide img {
     /* Postavlja poziciju slike u levom donjem uglu */
     /*background-position: left calc(100%  - 120px); /* Pomeranje slike 10 piksela od dna */
     background-repeat: no-repeat;
-    
-    
+
+
 }
 
 /*.logoKodProizvoda {
@@ -906,7 +908,7 @@ swiper-slide img {
     text-align: center;
     margin-bottom: 40px;
     color: var(--textNasiProizvodi-color);
-    
+
 }
 
 .tekstIProizvodi .textOkvalitetu::before {
@@ -1399,7 +1401,7 @@ footer .cetvrtiDivPracenje {
     color: #F4F4F4;
     /*padding-left: 15px;
     padding-right: 100px;*/
-    
+
 
 }
 
@@ -1452,6 +1454,14 @@ footer .footerDole .privatnost {
 
 }
 
+.PS {
+    display: flex;
+    /* Koristite fleksibilni kontejner za raspoređivanje elemenata u istom redu */
+    justify-content: center;
+    /* Centralizujte sadržaj u horizontalnom smeru */
+    align-items: center;
+}
+
 footer .footerDole .uslovi {
     font-family: Roboto;
     font-size: 14px;
@@ -1459,6 +1469,7 @@ footer .footerDole .uslovi {
     line-height: 19px;
     letter-spacing: 0.03em;
     text-decoration: underline;
+    margin-right: 10px;
 
 }
 
@@ -1496,9 +1507,11 @@ footer .footerDole .studio {
         transform: translate(-60%, -40%);
         width: 70%;
     }
+
     .popup-text {
         font-size: 12px;
     }
+
     .popup-textDvg {
         font-size: 14px;
     }
@@ -1510,16 +1523,19 @@ footer .footerDole .studio {
     .header .div1 .jezici ul li a {
         font-size: 10px;
     }
+
     .divPosleSlajdova .elementiGore .smallText {
         font-size: 17px;
     }
+
     .divPosleSlajdova .elementiGore .bigText {
         font-size: 25px;
     }
-    
-    .divPosleSlajdova{
+
+    .divPosleSlajdova {
         flex-direction: column;
     }
+
     .divPosleSlajdova .elementiDole .btnOnama {
         max-width: 50%;
         font-size: 12px;
@@ -1539,6 +1555,7 @@ footer .footerDole .studio {
         flex-direction: column;
         padding: 30px;
     }
+
     .triSlike p {
         font-size: 12px;
     }
@@ -1547,7 +1564,7 @@ footer .footerDole .studio {
         padding-top: 40px;
         font-size: 30px;
     }
-    
+
     .naslovDVG .statistikaBrojke .broj {
         font-size: 30px;
     }
@@ -1559,14 +1576,17 @@ footer .footerDole .studio {
     .tekstiznadBrendova {
         font-size: 20px;
     }
+
     .zadnjiDivSaBrendovima .btn {
         width: 30%;
         height: auto;
     }
+
     .zadnjiDivSaBrendovima .btn p {
         font-size: 13px;
         padding: 3px;
     }
+
     .brendoviSlike {
         flex-direction: column;
         margin-top: 100px;
@@ -1581,7 +1601,10 @@ footer .footerDole .studio {
     footer .drugiDivKontakt .naslov {
         padding-top: 35px;
     }
-    .drugiDivKontakt .adresa, .email, .telefon {
+
+    .drugiDivKontakt .adresa,
+    .email,
+    .telefon {
         padding-top: 15px;
         padding-bottom: 20px;
     }
@@ -1596,29 +1619,31 @@ footer .footerDole .studio {
     }
 
     footer .cetvrtiDivPracenje {
-       padding-top: 35px;
+        padding-top: 35px;
     }
 
     footer .footerDole {
         flex-direction: column;
-        text-align: center; 
+        text-align: center;
     }
 
     footer .footerDole .copyText {
         margin-left: 0;
     }
+
     footer .footerDole .privatnost {
         text-align: center;
     }
 
     footer .footerDole .studio {
         text-align: center;
-        
+
     }
+
     footer .footerDole .powered {
         margin-right: 0px;
     }
-    
+
 }
 
 
@@ -1634,15 +1659,17 @@ footer .footerDole .studio {
         transform: translate(-60%, -40%);
         width: 70%;
     }
+
     .popup-text {
         /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
         font-size: 20px;
     }
+
     .popup-textDvg {
         /* Postavite željene stilove za širinu ekrana veću ili jednaku 900px */
         /*top: 10%;*/
         font-size: 30px;
-        
+
     }
 
     .header .div1 {
@@ -1658,9 +1685,9 @@ footer .footerDole .studio {
         display: none;
     }
 
-    .switch{
+    .switch {
         margin-left: auto;
-     }
+    }
 
     .header .div1 .burger {
         margin-left: 15px;
@@ -1703,7 +1730,7 @@ footer .footerDole .studio {
         display: block;
     }
 
-    .divPosleSlajdova{
+    .divPosleSlajdova {
         flex-direction: column;
     }
 
@@ -1746,29 +1773,37 @@ footer .footerDole .studio {
     }
 
     footer .cetvrtiDivPracenje {
-       padding-top: 35px;
-        
-       
+        padding-top: 35px;
+
+
     }
 
     footer .footerDole {
         flex-direction: column;
-        text-align: center; 
+        text-align: center;
     }
 
     footer .footerDole .copyText {
         margin-left: 0;
     }
+
     footer .footerDole .privatnost {
         text-align: center;
     }
 
     footer .footerDole .studio {
         text-align: center;
-        
+
     }
+
     footer .footerDole .powered {
         margin-right: 0px;
+    }
+
+    .PS {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -1777,5 +1812,5 @@ footer .footerDole .studio {
     .brendoviSlike {
         flex-direction: column;
     }
-    
+
 }
